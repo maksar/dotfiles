@@ -10,7 +10,10 @@
     userName = "Shestakov, Aleksandr";
     userEmail = "a.shestakov@itransition.com";
     package = pkgs.gitFull;
-    extraConfig = { diff = { colorMoved = "default"; }; };
+    extraConfig = {
+      diff = { colorMoved = "default"; };
+      pull = { ff = "only"; };
+    };
     aliases = {
       s = "status";
       co = "checkout";
