@@ -18,6 +18,12 @@
     sha256 = "07w35c69vk1l6vipnq3qfack36qcszqxn8j3v332bl0w6m02aa7k";
   }
   {
+    name = "terraform";
+    publisher = "hashicorp";
+    version = "2.6.0";
+    sha256 = "1zg90x2asl6gakd2w8fn4imllqgrzdb1dn3728s63blmml42a1xp";
+  }
+  {
     name = "haskell";
     publisher = "haskell";
     version = "1.2.0";
