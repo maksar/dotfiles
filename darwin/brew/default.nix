@@ -41,6 +41,7 @@
     "vivaldi"
     "steam"
     "slack"
+    "vlc"
   ];
   homebrew.masApps = {
     "XCode" = 497799835;
