@@ -3,11 +3,11 @@ with lib;
 {
   imports = [
     ./bucketer.nix
+    ./ldap-bot.nix
   ];
 
   options = {
     mainUser = mkOption {
-      default = builtins.head (builtins.attrNames config.users.users);
       type = types.str;
       description = ''
         Name of the main user.

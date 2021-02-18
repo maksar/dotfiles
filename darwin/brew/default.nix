@@ -1,9 +1,4 @@
 {
-
-  imports = [
-    ./brew.nix
-  ];
-
   homebrew.enable = true;
   homebrew.autoUpdate = true;
   homebrew.cleanup = "zap";
@@ -42,6 +37,7 @@
     "steam"
     "slack"
     "vlc"
+    "typora"
   ];
   homebrew.masApps = {
     "XCode" = 497799835;

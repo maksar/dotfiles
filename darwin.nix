@@ -1,22 +1,23 @@
 { config, pkgs, ... }:
 
-let username = "maksar";
-in {
+rec {
   imports = [ ./darwin <home-manager/nix-darwin> ./projects ];
 
-  users.users.${username} = {
-    home = "/Users/${username}";
+  mainUser = "maksar";
+
+  users.users.${mainUser} = {
+    home = "/Users/${mainUser}";
     shell = pkgs.zsh;
   };
   programs.zsh.enable = true;
 
   home-manager = {
-    users.${username} = import ./home-manager;
+    users.${mainUser} = import ./home-manager;
     useGlobalPkgs = true;
     useUserPackages = false;
   };
   environment.systemPackages =
-    config.home-manager.users.${username}.home.packages;
+    config.home-manager.users.${mainUser}.home.packages;
 
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix

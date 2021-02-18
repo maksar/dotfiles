@@ -28,6 +28,7 @@
     maxJobs = 6;
     buildCores = 6;
   }];
+  users.nix.configureBuildUsers = true;
 
   nix.binaryCachePublicKeys =
     [ "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=" ];
