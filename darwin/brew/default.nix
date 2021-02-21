@@ -38,6 +38,7 @@
     "slack"
     "vlc"
     "typora"
+    "transmission"
   ];
   homebrew.masApps = {
     "XCode" = 497799835;

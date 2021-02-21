@@ -2,14 +2,15 @@
 
   imports = [ ./kitty ./vscode ./zsh ./neovim ./git ./bat ];
 
-  home.packages = [
-    pkgs.home-manager
+  home.packages = with pkgs; [
+    home-manager
 
-    pkgs.ctop # Docker utils
+    ctop
 
-    pkgs.telnet
-    pkgs.asciinema
-    pkgs.tree
+    telnet
+    asciinema
+    tree
+    ag
   ];
 
 
