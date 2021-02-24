@@ -6,6 +6,12 @@
     sha256 = "1m6f6p7x8vshhb03ml7sra3v01a7i2p3064mvza800af7cyj3w5m";
   }
   {
+    name = "vscode-zipfs";
+    publisher = "arcanis";
+    version = "2.2.2";
+    sha256 = "1i0xc3msz3amqj1amxnh58628il97dwyf606i5423yq5pa4cnw6z";
+  }
+  {
     name = "Nix";
     publisher = "bbenoist";
     version = "1.0.1";
@@ -18,10 +24,16 @@
     sha256 = "07w35c69vk1l6vipnq3qfack36qcszqxn8j3v332bl0w6m02aa7k";
   }
   {
+    name = "dhall-lang";
+    publisher = "dhall";
+    version = "0.0.4";
+    sha256 = "0sa04srhqmngmw71slnrapi2xay0arj42j4gkan8i11n7bfi1xpf";
+  }
+  {
     name = "terraform";
     publisher = "hashicorp";
-    version = "2.6.0";
-    sha256 = "1zg90x2asl6gakd2w8fn4imllqgrzdb1dn3728s63blmml42a1xp";
+    version = "2.7.0";
+    sha256 = "0lpsng7rd88ppjybmypzw42czr6swwin5cyl78v36z3wjwqx26xp";
   }
   {
     name = "haskell";
