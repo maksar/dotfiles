@@ -1,5 +1,4 @@
-{ config, pkgs, home, ... }:
-{
+{ config, pkgs, home, ... }: {
 
   home.packages = [ pkgs.lsd pkgs.zsh-powerlevel10k ];
 

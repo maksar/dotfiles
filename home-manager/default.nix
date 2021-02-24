@@ -13,7 +13,6 @@
     ag
   ];
 
-
   programs.man.enable = true;
 
   programs.autojump = { enable = true; };

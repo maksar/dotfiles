@@ -6,6 +6,20 @@ in {
     src = ./.;
     # If your hooks are intrusive, avoid running on each commit with a default_states like this:
     # default_stages = ["manual" "push"];
-    hooks = { nixfmt.enable = true; };
+    hooks = {
+      vscode = {
+        enable = true;
+        name = "vscode";
+        entry = "./home-manager/vscode/update.sh";
+        pass_filenames = false;
+
+        raw = {
+          always_run = true;
+          stages = [ "manual" ];
+        };
+      };
+
+      nixfmt = { enable = true; };
+    };
   };
 }

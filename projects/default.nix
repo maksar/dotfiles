@@ -1,11 +1,6 @@
-{ config, lib, pkgs,  ... }:
-with lib;
-{
-  imports = [
-    ./bucketer.nix
-    ./ldap-bot.nix
-    ./gamgee.nix
-  ];
+{ config, lib, pkgs, ... }:
+with lib; {
+  imports = [ ./bucketer.nix ./ldap-bot.nix ./gamgee.nix ];
 
   options = {
     mainUser = mkOption {

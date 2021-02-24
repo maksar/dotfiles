@@ -2,8 +2,7 @@
 let
   ldapBotFolder = "${config.projectsFolder}/ldap-bot";
   ldapBot = (builtins.getFlake ldapBotFolder).packages.${pkgs.system}.console;
-in
-{
+in {
   environment.systemPackages = [ ldapBot ];
 
   environment.extraInit = ''

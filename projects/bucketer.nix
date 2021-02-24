@@ -2,8 +2,7 @@
 let
   bucketerFolder = "${config.projectsFolder}/bucketer";
   bucketer = import bucketerFolder { };
-in
-{
+in {
   environment.systemPackages = [ bucketer ];
 
   environment.extraInit = ''
@@ -11,7 +10,6 @@ in
     source ${bucketerFolder}/.env
     set +o allexport
   '';
-
 
   # launchd.user.agents.bucketer = {
   #   script = ''

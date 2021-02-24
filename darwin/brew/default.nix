@@ -16,7 +16,7 @@
 
   homebrew.brews = [
     "nmap" # version in nixos doesn't work with big sur
-   ];
+  ];
 
   homebrew.casks = [
     # Communication

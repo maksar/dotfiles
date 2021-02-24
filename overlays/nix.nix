@@ -1,3 +1,1 @@
-self: super: {
-  nix = super.nixUnstable;
-}
+self: super: { nix = super.nixUnstable; }

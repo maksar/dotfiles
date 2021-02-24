@@ -13,13 +13,9 @@ let
       cp ${(import "${gitmanFolder}/docker.nix" { }).outPath} $out/
     '';
   };
-in
-{
+in {
 
-  environment.systemPackages = [
-    gitman
-    gitmanDocker
-  ];
+  environment.systemPackages = [ gitman gitmanDocker ];
 
   environment.extraInit = ''
     set -o allexport;

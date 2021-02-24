@@ -1,8 +1,6 @@
 { config, pkgs, ... }: {
 
-  imports = [
-    ./pam.nix
-  ];
+  imports = [ ./pam.nix ];
 
   security.pam.enableSudoTouchIdAuth = true;
 }
