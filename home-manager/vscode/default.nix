@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
 
-  home.packages = [ pkgs.nixfmt ];
+  home.packages = [ pkgs.nixfmt pkgs.curl pkgs.jq ];
 
   programs.vscode = {
     enable = true;
