@@ -14,31 +14,45 @@
     # "homebrew/services"
   ];
 
-  homebrew.brews = [ "nmap" ]; # version in nixos doesn't work with big sur
+  homebrew.brews = [
+    "nmap" # version in nixos doesn't work with big sur
+   ];
 
   homebrew.casks = [
+    # Communication
     "skype"
+    "slack"
+    "viber"
     "telegram-desktop"
+    "zoom"
+
+    # Utilities
     "dropbox"
     "1password"
+    "alfred"
     "unshaky"
+
+    # Browsers & network tools
     "openvpn-connect"
     "firefox"
     "google-chrome"
-    "alfred"
-    "zoom"
+    "vivaldi"
+    "safari-technology-preview"
+    "transmission"
+
+    # Developer tools
     "docker"
     "sourcetree"
     "charles"
     "virtualbox"
     "jetbrains-toolbox"
-    "safari-technology-preview"
-    "vivaldi"
-    "steam"
-    "slack"
-    "vlc"
     "typora"
-    "transmission"
+
+    # Media
+    "steam"
+    "vlc"
+
+    "postman"
   ];
   homebrew.masApps = {
     "XCode" = 497799835;

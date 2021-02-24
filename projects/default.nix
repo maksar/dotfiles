@@ -4,6 +4,7 @@ with lib;
   imports = [
     ./bucketer.nix
     ./ldap-bot.nix
+    ./gamgee.nix
   ];
 
   options = {

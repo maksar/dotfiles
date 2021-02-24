@@ -27,6 +27,9 @@
       "workbench.iconTheme" = "vscode-icons-mac";
       "terminal.integrated.fontFamily" = "PragmataPro Liga";
       "haskell.serverExecutablePath" = "haskell-language-server";
+      "files.watcherExclude" = {
+        "**/*" = true;
+      };
     };
 
     keybindings = [{
