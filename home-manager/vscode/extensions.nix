@@ -51,8 +51,8 @@
     {
       name = "language-haskell";
       publisher = "justusadam";
-      version = "3.3.0";
-      sha256 = "1285bs89d7hqn8h8jyxww7712070zw2ccrgy6aswd39arscniffs";
+      version = "3.4.0";
+      sha256 = "0ab7m5jzxakjxaiwmg0jcck53vnn183589bbxh3iiylkpicrv67y";
     }
     {
       name = "Kotlin";
