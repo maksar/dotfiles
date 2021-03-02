@@ -11,6 +11,8 @@
     asciinema
     tree
     ag
+
+    ranger
   ];
 
   programs.man.enable = true;

@@ -23,7 +23,7 @@
     "skype"
     "slack"
     "viber"
-    "telegram-desktop"
+    "telegram"
     "zoom"
 
     # Utilities
