@@ -1,11 +1,5 @@
 set clipboard+=unnamedplus
 
-set termguicolors
-let g:airline_powerline_fonts = 1
-let g:rigel_airline = 0
-let g:airline_theme = 'rigel'
-colorscheme rigel
-
 set mouse=a
 
 :tnoremap <C-h> <C-\><C-N><C-w>h
