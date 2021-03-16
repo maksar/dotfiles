@@ -11,14 +11,14 @@ in {
     set +o allexport
   '';
 
-  # launchd.user.agents.bucketer = {
-  #   script = ''
-  #     source ${config.homeFolder}/.nix-profile/etc/profile.d/nix.sh
-  #     ${config.environment.extraInit}
-  #     ${bucketer}/bin/repositories
-  #     ${bucketer}/bin/open_pulls
-  #   '';
-  #   serviceConfig.KeepAlive = false;
-  #   serviceConfig.StartInterval = 1800;
-  # };
+  launchd.user.agents.bucketer = {
+    script = ''
+      source ${config.homeFolder}/.nix-profile/etc/profile.d/nix.sh
+      ${config.environment.extraInit}
+      ${bucketer}/bin/repositories
+      ${bucketer}/bin/open_pulls
+    '';
+    serviceConfig.KeepAlive = false;
+    serviceConfig.StartInterval = 1800;
+  };
 }
