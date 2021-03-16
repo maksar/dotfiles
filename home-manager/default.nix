@@ -1,5 +1,4 @@
 { config, pkgs, ... }: {
-
   imports = [ ./kitty ./vscode ./zsh ./neovim ./git ./bat ];
 
   home.packages = with pkgs; [
@@ -13,6 +12,10 @@
     ag
 
     ranger
+
+    nix-tree
+
+    pandoc
   ];
 
   programs.man.enable = true;
@@ -37,5 +40,4 @@
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "20.09";
-
 }

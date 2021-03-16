@@ -7,6 +7,7 @@
     enableAutosuggestions = true;
     envExtra = ''
       PATH=./bin/:$PATH
+      POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
     '';
     loginExtra = ''
       ${builtins.readFile ./.p10k.zsh}

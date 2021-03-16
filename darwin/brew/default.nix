@@ -25,6 +25,7 @@
     "viber"
     "telegram"
     "zoom"
+    "miro"
 
     # Utilities
     "dropbox"
@@ -39,6 +40,7 @@
     "vivaldi"
     "safari-technology-preview"
     "transmission"
+    "tunnelbear"
 
     # Developer tools
     "docker"
@@ -47,6 +49,7 @@
     "virtualbox"
     "jetbrains-toolbox"
     "typora"
+    "fvim"
 
     # Media
     "steam"
@@ -57,8 +60,14 @@
   homebrew.masApps = {
     "XCode" = 497799835;
     "Amphetamine" = 937984704;
+
+    # Microsoft
     "Excel" = 462058435;
     "Word" = 462054704;
+    "PowerPoint" = 462062816;
+    "RemoteDesktop" = 1295203466;
+
+    # Apple
     "Pages" = 409201541;
   };
 }
