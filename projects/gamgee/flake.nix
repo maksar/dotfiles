@@ -1,5 +1,5 @@
 {
-  description = "LDAP-bot Flake";
+  description = "Gamgee Flake";
 
   inputs = {
     flake-utils = { url = "github:numtide/flake-utils"; };
@@ -24,10 +24,10 @@
           src = pkgs.stdenv.mkDerivation {
             name = "source";
             src = pkgs.fetchFromGitHub {
-              owner = "maksar";
+              owner = "rkaippully";
               repo = "gamgee";
-              rev = "34cc95b39abea22769d18993992e9aacbee07a22";
-              sha256 = "0sabwdrppx90vk32ilnc7n89mjqqhnp3drqvbypy0cx7b1i90wcm";
+              rev = "bd15030fd385ef5b271c372afb8c0fd22848b7f8";
+              sha256 = "sha256-lXGQYlinM+CvXxvnNq6FGMuakD3M0ijG3CD1e3PjS2k=";
             };
             buildPhase = ''
               mkdir $out
@@ -38,7 +38,7 @@
             installPhase = "true";
             buildInputs = [ pkgs.dhall-json ];
           };
-          stack-sha256 = "00dkimffbzdcvnna8sm4rcq90bvhgy36y7mymmjpqnvigif1yvwm";
+          stack-sha256 = "sha256-lW8fXHxxW3xlrb4eb4Z/cC+QMMukaqSs3az95VyNswE=";
           materialized = ./materialized;
         };
       in rec {
