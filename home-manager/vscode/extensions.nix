@@ -33,14 +33,14 @@
     {
       name = "gitlens";
       publisher = "eamodio";
-      version = "11.2.1";
-      sha256 = "1ba72sr7mv9c0xzlqlxbv1x8p6jjvdjkkf7dn174v8b8345164v6";
+      version = "11.3.0";
+      sha256 = "0py8c5h3pp99r0q9x2dgh1ryp05dbndyc5ipp999z3x1xvwnfrlv";
     }
     {
       name = "terraform";
       publisher = "hashicorp";
-      version = "2.7.0";
-      sha256 = "0lpsng7rd88ppjybmypzw42czr6swwin5cyl78v36z3wjwqx26xp";
+      version = "2.8.2";
+      sha256 = "0f1ck3h8ckvr75j27w2lxjbwnr24nc6fjki0gnn715ynkqg7w9bi";
     }
     {
       name = "haskell";
@@ -65,6 +65,12 @@
       publisher = "rebornix";
       version = "0.28.1";
       sha256 = "179g7nc6mf5rkha75v7rmb3vl8x4zc6qk1m0wn4pgylkxnzis18w";
+    }
+    {
+      name = "slim";
+      publisher = "sianglim";
+      version = "0.1.2";
+      sha256 = "0k63dh7j6k5ci9y3wy4nyawr2l5rszw7lwqngayn0nkwxpdjd23x";
     }
     {
       name = "vscode-icons-mac";
