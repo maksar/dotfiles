@@ -1,4 +1,4 @@
 { config, pkgs, ... }: {
 
-  imports = [ ./nix ./pam ./brew ./fonts ./macos ./postgresql ./redis ];
+  imports = [ ./nix ./pam ./brew ./fonts ./macos ./postgresql ./redis ./mysql ];
 }
