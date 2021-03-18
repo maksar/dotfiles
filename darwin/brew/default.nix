@@ -8,7 +8,7 @@
   homebrew.taps = [
     "homebrew/cask"
     "homebrew/cask-versions"
-    # "homebrew/cask-drivers"
+    "homebrew/cask-drivers"
     # "homebrew/cask-fonts"
     # "homebrew/core"
     # "homebrew/services"
@@ -19,6 +19,9 @@
   ];
 
   homebrew.casks = [
+    # Drivers
+    "logitech-control-center"
+
     # Communication
     "skype"
     "slack"
@@ -26,6 +29,7 @@
     "telegram"
     "zoom"
     "miro"
+    "obs"
 
     # Utilities
     "dropbox"
