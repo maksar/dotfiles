@@ -31,6 +31,12 @@
       sha256 = "0sa04srhqmngmw71slnrapi2xay0arj42j4gkan8i11n7bfi1xpf";
     }
     {
+      name = "githistory";
+      publisher = "donjayamanne";
+      version = "0.6.16";
+      sha256 = "15dzkf7qdpv8q4bdz6m9nnhrzrcg4bwqzlwa35117xlhrxx7gvb9";
+    }
+    {
       name = "gitlens";
       publisher = "eamodio";
       version = "11.3.0";
@@ -39,8 +45,8 @@
     {
       name = "terraform";
       publisher = "hashicorp";
-      version = "2.8.2";
-      sha256 = "0f1ck3h8ckvr75j27w2lxjbwnr24nc6fjki0gnn715ynkqg7w9bi";
+      version = "2.8.3";
+      sha256 = "1cng82q9079qmn5q71h9knh9qzhqrl3phaamkqfjy1jallgi43b1";
     }
     {
       name = "haskell";
@@ -59,6 +65,12 @@
       publisher = "mathiasfrohlich";
       version = "1.7.1";
       sha256 = "0zi8s1y9l7sfgxfl26vqqqylsdsvn5v2xb3x8pcc4q0xlxgjbq1j";
+    }
+    {
+      name = "vscode-docker";
+      publisher = "ms-azuretools";
+      version = "1.11.0";
+      sha256 = "141800jcxslqa5nbwcdj4mwnysa42mxligvc073gf225ns984vfr";
     }
     {
       name = "ruby";
