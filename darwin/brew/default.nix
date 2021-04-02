@@ -28,6 +28,7 @@
     "viber"
     "telegram"
     "zoom"
+    "microsoft-teams"
     "miro"
     "obs"
 
