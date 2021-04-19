@@ -16,6 +16,7 @@
     nix-tree
 
     pandoc
+    cachix
   ];
 
   programs.man.enable = true;

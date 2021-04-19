@@ -9,14 +9,20 @@
     {
       name = "vscode-zipfs";
       publisher = "arcanis";
-      version = "2.2.2";
-      sha256 = "1i0xc3msz3amqj1amxnh58628il97dwyf606i5423yq5pa4cnw6z";
+      version = "2.3.0";
+      sha256 = "041k63d94g0dk88cllh077hvhvk4hl0fm2bdfk1hyna3ywk47mr1";
     }
     {
       name = "Nix";
       publisher = "bbenoist";
       version = "1.0.1";
       sha256 = "0zd0n9f5z1f0ckzfjr38xw2zzmcxg1gjrava7yahg5cvdcw6l35b";
+    }
+    {
+      name = "unique-lines";
+      publisher = "bibhasdn";
+      version = "1.0.0";
+      sha256 = "1x0lkdvc0247bms200nn2z5m7qaq9lg96ppbgk6lg3mgmxknjijv";
     }
     {
       name = "nixfmt-vscode";
@@ -39,14 +45,14 @@
     {
       name = "gitlens";
       publisher = "eamodio";
-      version = "11.3.0";
-      sha256 = "0py8c5h3pp99r0q9x2dgh1ryp05dbndyc5ipp999z3x1xvwnfrlv";
+      version = "11.4.1";
+      sha256 = "1gqkcv210h595rxwqsgwywjg2c2xnxdjlpqmgg091hd36g7jhcrs";
     }
     {
       name = "terraform";
       publisher = "hashicorp";
-      version = "2.8.3";
-      sha256 = "1cng82q9079qmn5q71h9knh9qzhqrl3phaamkqfjy1jallgi43b1";
+      version = "2.10.0";
+      sha256 = "1xhypy4vvrzxj3qwkzpfx8b48hddf72mxmh0hgz7iry6bch6sh5f";
     }
     {
       name = "haskell";
@@ -69,8 +75,8 @@
     {
       name = "vscode-docker";
       publisher = "ms-azuretools";
-      version = "1.11.0";
-      sha256 = "141800jcxslqa5nbwcdj4mwnysa42mxligvc073gf225ns984vfr";
+      version = "1.12.1";
+      sha256 = "01ba220ykyrfflx7lb4j0n8cwbkny8kn19a26sadj6ydh34qy3bk";
     }
     {
       name = "ruby";

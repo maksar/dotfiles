@@ -73,27 +73,26 @@ in {
 
       vim-airline = {
         enable = true;
-        nvimrc = { postPlugin = "let g:airline_powerline_fonts = 1"; };
+        extraConfig = "let g:airline_powerline_fonts = 1";
       };
 
       rigel = {
         enable = true;
         source = rigel;
-        nvimrc = {
-          postPlugin = ''
-            set termguicolors
-            syntax enable
+        extraConfig = ''
+          set termguicolors
+          syntax enable
 
-            colorscheme rigel
-          '';
-        };
+          colorscheme rigel
+        '';
       };
 
       vim-xkbswitch-mac = {
         enable = true;
         source = vim-xkbswitch-mac;
-        nvimrc = { postPlugin = "let g:XkbSwitchEnabled = 1"; };
+        extraConfig = "let g:XkbSwitchEnabled = 1";
       };
+
       ctrlp-vim.enable = true;
       vim-nix.enable = true;
       vim-gitgutter.enable = true;
