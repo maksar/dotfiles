@@ -51,14 +51,20 @@
     {
       name = "terraform";
       publisher = "hashicorp";
-      version = "2.10.0";
-      sha256 = "1xhypy4vvrzxj3qwkzpfx8b48hddf72mxmh0hgz7iry6bch6sh5f";
+      version = "2.10.1";
+      sha256 = "1galibrk4fx4qwa6q17mmwlikx78nmhgv1h98haiyak666cinzcq";
     }
     {
       name = "haskell";
       publisher = "haskell";
       version = "1.2.0";
       sha256 = "0vxsn4s27n1aqp5pp4cipv804c9cwd7d9677chxl0v18j8bf7zly";
+    }
+    {
+      name = "plantuml";
+      publisher = "jebbs";
+      version = "2.14.5";
+      sha256 = "07axq8afhys25aif1db2jxpcjl2fwwrg4iwkiz3b1m2xh5ar2jzc";
     }
     {
       name = "language-haskell";
@@ -89,6 +95,12 @@
       publisher = "sianglim";
       version = "0.1.2";
       sha256 = "0k63dh7j6k5ci9y3wy4nyawr2l5rszw7lwqngayn0nkwxpdjd23x";
+    }
+    {
+      name = "ormolu-vscode";
+      publisher = "sjurmillidahl";
+      version = "0.0.6";
+      sha256 = "1mcpiydd5j6za8lbfcb2frk7gw51j0r3vl1lsvii1nsrc380l26w";
     }
     {
       name = "vscode-icons-mac";
