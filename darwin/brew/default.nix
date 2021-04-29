@@ -9,12 +9,19 @@
     "homebrew/cask"
     "homebrew/cask-versions"
     "homebrew/cask-drivers"
+    "microsoft/mssql-release"
     # "homebrew/cask-fonts"
     # "homebrew/core"
     # "homebrew/services"
   ];
 
+  environment.variables = { ACCEPT_EULA = "Y"; };
+
   homebrew.brews = [
+    # MSSQL connection drivers
+    "unixodbc"
+    "msodbcsql17"
+
     "nmap" # version in nixos doesn't work with big sur
   ];
 
