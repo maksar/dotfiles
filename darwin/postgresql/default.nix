@@ -1,12 +1,9 @@
 { config, pkgs, ... }: {
 
   services.postgresql = {
-    enable = true;
+    enable = false;
     package = pkgs.postgresql;
-    dataDir = config.users.users.${config.mainUser}.home + "/.postgresql";
-    enableTCPIP = true;
-
-    extraConfig = "listen_addresses = 'localhost'";
+    dataDir = config.users.users."${config.mainUser}".home + "/.postgresql";
+    enableTCPIP = false;
   };
-
 }
