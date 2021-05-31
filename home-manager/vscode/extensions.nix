@@ -19,6 +19,12 @@
       sha256 = "0zd0n9f5z1f0ckzfjr38xw2zzmcxg1gjrava7yahg5cvdcw6l35b";
     }
     {
+      name = "vscode-cabal-fmt";
+      publisher = "berberman";
+      version = "0.0.2";
+      sha256 = "0kn5j8rpaidsk8xbbidpykmhpyxmxrmlj1ky9kjjbxxy8rl43w09";
+    }
+    {
       name = "unique-lines";
       publisher = "bibhasdn";
       version = "1.0.0";
@@ -29,6 +35,18 @@
       publisher = "brettm12345";
       version = "0.0.1";
       sha256 = "07w35c69vk1l6vipnq3qfack36qcszqxn8j3v332bl0w6m02aa7k";
+    }
+    {
+      name = "rails";
+      publisher = "bung87";
+      version = "0.17.1";
+      sha256 = "1nrhfxnxdxsknrm6ps9ygyw7a6x8qccl0nvlwliqkw0279j9gz34";
+    }
+    {
+      name = "vscode-gemfile";
+      publisher = "bung87";
+      version = "0.4.0";
+      sha256 = "0726rblg2cykizg0y2qkxc9hmlc6pxfy7ckc4zg73zbza472famj";
     }
     {
       name = "dhall-lang";
@@ -51,14 +69,20 @@
     {
       name = "terraform";
       publisher = "hashicorp";
-      version = "2.10.1";
-      sha256 = "1galibrk4fx4qwa6q17mmwlikx78nmhgv1h98haiyak666cinzcq";
+      version = "2.11.0";
+      sha256 = "0wqdya353b415qxs8jczmis3q6d8fddv1pdd8jdd0w64s1ibv3sy";
     }
     {
       name = "haskell";
       publisher = "haskell";
-      version = "1.2.0";
-      sha256 = "0vxsn4s27n1aqp5pp4cipv804c9cwd7d9677chxl0v18j8bf7zly";
+      version = "1.4.0";
+      sha256 = "1jk702fd0b0aqfryixpiy6sc8njzd1brd0lbkdhcifp0qlbdwki0";
+    }
+    {
+      name = "haskell-linter";
+      publisher = "hoovercj";
+      version = "0.0.6";
+      sha256 = "0fb71cbjx1pyrjhi5ak29wj23b874b5hqjbh68njs61vkr3jlf1j";
     }
     {
       name = "plantuml";
@@ -79,10 +103,16 @@
       sha256 = "0zi8s1y9l7sfgxfl26vqqqylsdsvn5v2xb3x8pcc4q0xlxgjbq1j";
     }
     {
+      name = "haskell-extension-pack";
+      publisher = "mogeko";
+      version = "0.0.1";
+      sha256 = "0016myd7halfmq0cdsdif9rdwld2v3h3zzp1lnpa9rvf6rfxrlhj";
+    }
+    {
       name = "vscode-docker";
       publisher = "ms-azuretools";
-      version = "1.12.1";
-      sha256 = "01ba220ykyrfflx7lb4j0n8cwbkny8kn19a26sadj6ydh34qy3bk";
+      version = "1.13.0";
+      sha256 = "09iq528m3f8xa67daxyxddmg6xkzbbs2jps4hdni68j7jn0724y7";
     }
     {
       name = "ruby";
@@ -107,6 +137,12 @@
       publisher = "wayou";
       version = "7.25.3";
       sha256 = "0wjx93nkj8n9pc8a7h08aqdj7ar2bghfs95dn30h5kch49biwy79";
+    }
+    {
+      name = "vscode-alternate-file";
+      publisher = "will-wow";
+      version = "0.3.1";
+      sha256 = "1mz1m5gfhyqa66wza6xb4hmkwhgi48npwj34w2n2nalvf6k53w85";
     }
     {
       name = "vscode-ruby";

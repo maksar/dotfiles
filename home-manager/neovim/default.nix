@@ -18,25 +18,20 @@ let
     dependencies = [ ];
   });
 
-  issw = (
+  issw = (pkgs.stdenv.mkDerivation rec {
+    pname = "issw";
+    version = "v0.3";
 
-    pkgs.stdenv.mkDerivation rec {
-      pname = "issw";
-      version = "v0.3";
+    src = pkgs.fetchFromGitHub {
+      owner = "vovkasm";
+      repo = "input-source-switcher";
+      rev = version;
+      sha256 = "sha256-JjMNdpqt10CHpUGt5kX15bVDmqm1CbD5lqyLlXY1Jfg=";
+    };
 
-      src = pkgs.fetchFromGitHub {
-        owner = "vovkasm";
-        repo = "input-source-switcher";
-        rev = version;
-        sha256 = "sha256-JjMNdpqt10CHpUGt5kX15bVDmqm1CbD5lqyLlXY1Jfg=";
-      };
-
-      nativeBuildInputs = [ pkgs.cmake ];
-      buildInputs = [ pkgs.darwin.apple_sdk.frameworks.Carbon ];
-
-    }
-
-  );
+    nativeBuildInputs = [ pkgs.cmake ];
+    buildInputs = [ pkgs.darwin.apple_sdk.frameworks.Carbon ];
+  });
 
   vim-xkbswitch-mac = pkgs.vimPlugins.vim-xkbswitch.overrideAttrs (old: {
     patchPhase = ''
@@ -52,7 +47,6 @@ in {
   home.packages = [ pkgs.nix-prefetch-git ];
   sn.programs.neovim = {
     extraConfig = builtins.readFile ./vimrc;
-    # mergePlugins = true;
 
     pluginRegistry = {
       vim-devicons = {
@@ -104,7 +98,6 @@ in {
       fzf-vim.enable = true;
       nerdtree.enable = true;
       haskell-vim.enable = true;
-      kotlin-vim.enable = true;
       vim-markdown.enable = true;
     };
   };

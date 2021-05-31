@@ -26,8 +26,12 @@
   ];
 
   homebrew.casks = [
+
+    "Element"
+
     # Drivers
     "logitech-control-center"
+    "sensiblesidebuttons"
 
     # Communication
     "skype"
