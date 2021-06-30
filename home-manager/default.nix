@@ -19,16 +19,17 @@
   ];
 
   programs.man.enable = true;
-
-  programs.autojump = { enable = true; };
-
+  programs.autojump.enable = true;
   programs.jq.enable = true;
   programs.htop.enable = true;
   programs.dircolors.enable = true;
   programs.fzf.enable = true;
   programs.direnv = {
     enable = true;
-    enableNixDirenvIntegration = true;
+    nix-direnv = {
+      enable = true;
+      enableFlakes = true;
+    };
   };
 
   # This value determines the Home Manager release that your
