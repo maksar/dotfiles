@@ -4,20 +4,18 @@
   inputs = {
     flake-utils = { url = "github:numtide/flake-utils"; };
 
-    nixpkgs = { url = "github:NixOS/nixpkgs/master"; };
-
     haskell-nix = {
-      url = "github:hackworthltd/haskell.nix/flake-fixes";
-      inputs = { nixpkgs = { follows = "nixpkgs"; }; };
+      url = "github:input-output-hk/haskell.nix";
+      inputs = { nixpkgs = { follows = "haskell-nix/nixpkgs-unstable"; }; };
     };
   };
 
-  outputs = { self, flake-utils, nixpkgs, haskell-nix }:
+  outputs = { self, flake-utils, haskell-nix }:
     flake-utils.lib.eachSystem (builtins.attrNames haskell-nix.legacyPackages)
     (system:
       with haskell-nix.legacyPackages.${system};
       let
-        compiler-nix-name = "ghc883";
+        compiler-nix-name = "ghc884";
 
         project = pkgs.haskell-nix.project {
           inherit compiler-nix-name;
