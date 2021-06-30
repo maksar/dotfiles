@@ -2,6 +2,7 @@
 
   home.packages = [
     pkgs.tig
+    pkgs.lazygit
 
     pkgs.gitAndTools.delta
   ];
