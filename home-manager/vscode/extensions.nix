@@ -1,6 +1,12 @@
 {
   extensions = [
     {
+      name = "terraform";
+      publisher = "4ops";
+      version = "0.2.2";
+      sha256 = "1f62sck05gvjp7bb6zv34mdbk57y0c9h1av9kp62vjfqggv4zdpf";
+    }
+    {
       name = "vscode-theme-onedark";
       publisher = "akamud";
       version = "2.2.3";
@@ -11,6 +17,12 @@
       publisher = "arcanis";
       version = "2.3.0";
       sha256 = "041k63d94g0dk88cllh077hvhvk4hl0fm2bdfk1hyna3ywk47mr1";
+    }
+    {
+      name = "spellright";
+      publisher = "ban";
+      version = "3.0.58";
+      sha256 = "07891rad3261ciaql2s6adaxmd2sm5w6z4s8r5zfldiv4wrk2370";
     }
     {
       name = "Nix";
@@ -39,14 +51,14 @@
     {
       name = "rails";
       publisher = "bung87";
-      version = "0.17.1";
-      sha256 = "1nrhfxnxdxsknrm6ps9ygyw7a6x8qccl0nvlwliqkw0279j9gz34";
+      version = "0.17.8";
+      sha256 = "1p6s0svhw677qr3hxpr64ym1pph5bvbnwdn5hs64zi0hmibzyz2j";
     }
     {
       name = "vscode-gemfile";
       publisher = "bung87";
-      version = "0.4.0";
-      sha256 = "0726rblg2cykizg0y2qkxc9hmlc6pxfy7ckc4zg73zbza472famj";
+      version = "0.4.2";
+      sha256 = "1kh4wz7fiafm95wln9npabplnsldbxv2n3h5wjp34w91vl4x0q19";
     }
     {
       name = "dhall-lang";
@@ -57,26 +69,38 @@
     {
       name = "githistory";
       publisher = "donjayamanne";
-      version = "0.6.16";
-      sha256 = "15dzkf7qdpv8q4bdz6m9nnhrzrcg4bwqzlwa35117xlhrxx7gvb9";
+      version = "0.6.18";
+      sha256 = "01lc9gpqdjy6himn7jsfjrfz8xrk728c20903lxkxy5fliv232gz";
+    }
+    {
+      name = "sync-scroll";
+      publisher = "dqisme";
+      version = "1.3.0";
+      sha256 = "03n7k45rx7jc15pap7jm1fcn0f5x6dfprkwys3n6cdmgdk288y42";
     }
     {
       name = "gitlens";
       publisher = "eamodio";
-      version = "11.4.1";
-      sha256 = "1gqkcv210h595rxwqsgwywjg2c2xnxdjlpqmgg091hd36g7jhcrs";
+      version = "11.6.0";
+      sha256 = "0lhrw24ilncdczh90jnjx71ld3b626xpk8b9qmwgzzhby89qs417";
+    }
+    {
+      name = "copilot";
+      publisher = "GitHub";
+      version = "1.3.2200";
+      sha256 = "1dkvpkmn8fjxkyihls4cv0bp8m1a5qhj3hxm95nn53mjrxalc2ai";
     }
     {
       name = "terraform";
       publisher = "hashicorp";
-      version = "2.11.0";
-      sha256 = "0wqdya353b415qxs8jczmis3q6d8fddv1pdd8jdd0w64s1ibv3sy";
+      version = "2.14.0";
+      sha256 = "1q43a28l6xfp3yw6wlr1kcidik0dbp8b7lg9vc83rhw4rjgvjsfm";
     }
     {
       name = "haskell";
       publisher = "haskell";
-      version = "1.4.0";
-      sha256 = "1jk702fd0b0aqfryixpiy6sc8njzd1brd0lbkdhcifp0qlbdwki0";
+      version = "1.5.0";
+      sha256 = "1k6qpksgrfm3ldhsdimhzggxbrkcrj2hj2c30qa2kshm4dcismp9";
     }
     {
       name = "haskell-linter";
@@ -87,8 +111,8 @@
     {
       name = "plantuml";
       publisher = "jebbs";
-      version = "2.14.5";
-      sha256 = "07axq8afhys25aif1db2jxpcjl2fwwrg4iwkiz3b1m2xh5ar2jzc";
+      version = "2.15.1";
+      sha256 = "030rrzadp39byjh792r0wz4mms622plsf9amkics843nf09zzgkv";
     }
     {
       name = "language-haskell";
@@ -111,8 +135,8 @@
     {
       name = "vscode-docker";
       publisher = "ms-azuretools";
-      version = "1.13.0";
-      sha256 = "09iq528m3f8xa67daxyxddmg6xkzbbs2jps4hdni68j7jn0724y7";
+      version = "1.15.0";
+      sha256 = "0rbd2pp4k4q2781jxfc87mxxj4m0gs4nrl2d1fa0aljgw4fln17j";
     }
     {
       name = "ruby";
@@ -131,6 +155,18 @@
       publisher = "sjurmillidahl";
       version = "0.0.6";
       sha256 = "1mcpiydd5j6za8lbfcb2frk7gw51j0r3vl1lsvii1nsrc380l26w";
+    }
+    {
+      name = "sass-indented";
+      publisher = "syler";
+      version = "1.8.17";
+      sha256 = "0avqwwp30x6illaafckvqj2qrv3xlnsymhmya549i6pvdy1l0lx1";
+    }
+    {
+      name = "html-preview-vscode";
+      publisher = "tht13";
+      version = "0.2.5";
+      sha256 = "0k75ivigzjfq8y4xwwrgs2iy913plkwp2a68f0i4bkz9kx39wq6v";
     }
     {
       name = "vscode-icons-mac";
