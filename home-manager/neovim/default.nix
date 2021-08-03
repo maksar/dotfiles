@@ -65,9 +65,14 @@ in {
         ];
       };
 
+      vim-airline-themes = { enable = true; };
       vim-airline = {
         enable = true;
-        extraConfig = "let g:airline_powerline_fonts = 1";
+        extraConfig = ''
+          let g:airline_powerline_fonts = 1
+          let g:airline#extensions#tabline#enabled = 1
+
+        '';
       };
 
       rigel = {
