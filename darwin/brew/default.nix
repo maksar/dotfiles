@@ -15,7 +15,11 @@
     # "homebrew/services"
   ];
 
-  environment.variables = { ACCEPT_EULA = "Y"; };
+  environment.variables = {
+    HOMEBREW_NO_ENV_FILTERING = "1";
+    HOMEBREW_ACCEPT_EULA = "Y";
+    ACCEPT_EULA = "Y";
+  };
 
   homebrew.brews = [
     # MSSQL connection drivers
@@ -27,8 +31,7 @@
 
   homebrew.casks = [
     # Drivers
-    "logitech-control-center"
-    "sensiblesidebuttons"
+    "logitech-options"
 
     # Communication
     "skype"
@@ -62,7 +65,6 @@
     "virtualbox"
     "jetbrains-toolbox"
     "typora"
-    "fvim"
 
     # Media
     "steam"
