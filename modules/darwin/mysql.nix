@@ -8,7 +8,7 @@ let
   mysql = cfg.package;
 
   mysqldOptions =
-    "--defaults-file=/etc/my.cnf --user=${config.mainUser} --datadir=${cfg.dataDir} --basedir=${mysql}";
+    "--defaults-file=/etc/my.cnf --user=${config.users.primaryUser} --datadir=${cfg.dataDir} --basedir=${mysql}";
 
 in {
   options = {
@@ -71,7 +71,7 @@ in {
     launchd.user.agents.mysql = {
       path = [ mysql ];
       script = ''
-        source ${config.homeFolder}/.nix-profile/etc/profile.d/nix.sh
+        source ${config.users.users.${config.users.primaryUser}.home}/.nix-profile/etc/profile.d/nix.sh
         zsh -l -c "
           mysql_install_db ${mysqldOptions} --auth-root-authentication-method=normal
           exec mysqld ${mysqldOptions}

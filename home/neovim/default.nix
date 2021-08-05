@@ -1,11 +1,5 @@
 { config, pkgs, ... }:
 let
-
-  envy = builtins.fetchGit {
-    url = "https://github.com/Shados/envy";
-    ref = "master";
-  };
-
   rigel = (pkgs.vimUtils.buildVimPluginFrom2Nix {
     pname = "rigel";
     version = "2020-08-25";
@@ -39,10 +33,7 @@ let
     '';
     buildInputs = [ issw ];
   });
-
 in {
-
-  imports = [ (import "${envy}/home-manager.nix" { }) ];
 
   home.packages = [ pkgs.nix-prefetch-git ];
   sn.programs.neovim = {

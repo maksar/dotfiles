@@ -1,33 +1,124 @@
+# Usefull links
+# https://githubmemory.com/repo/hardselius/dotfiles
+# https://github.com/malob/nixpkgs
+
 {
-  description = "Macbook Flake.";
+  description = "Malo’s Nix system configs, and some other useful stuff.";
 
-  inputs.pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
-  inputs.flake-utils.url = "github:numtide/flake-utils";
+  inputs = {
+    # Package sets
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-21.05-darwin";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs-master.url = "github:nixos/nixpkgs/master";
+    nixos-stable.url = "github:nixos/nixpkgs/nixos-21.05";
 
-  outputs = { self, nixpkgs, pre-commit-hooks, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system: {
-      checks = {
-        pre-commit-check = pre-commit-hooks.lib.${system}.run {
-          src = ./.;
-          hooks = {
-            vscode = {
-              enable = true;
-              name = "vscode";
-              entry = "./home-manager/vscode/update.sh";
-              pass_filenames = false;
+    # Environment/system management
+    darwin.url = "github:LnL7/nix-darwin";
+    darwin.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager.url = "github:nix-community/home-manager/release-21.05";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-              raw = {
-                always_run = true;
-                stages = [ "manual" ];
-              };
-            };
+    # Other sources
+    comma = { url = "github:Shopify/comma"; flake = false; };
 
-            nixfmt = { enable = true; };
-          };
-        };
+    flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
+    flake-utils.url = "github:numtide/flake-utils";
+
+    prefmanager.url = "github:malob/prefmanager";
+    prefmanager.inputs.nixpkgs.follows = "nixpkgs";
+
+    envy = { url = "github:Shados/envy"; flake = false; };
+  };
+
+  outputs = { self, nixpkgs, darwin, home-manager, flake-utils, envy, ... }@inputs:
+  let
+    # Configuration for `nixpkgs` mostly used in personal configs.
+    nixpkgsConfig = with inputs; rec {
+      config = { allowUnfree = true; };
+      overlays = self.overlays ++ [
+        (
+          final: prev: {
+            master = import nixpkgs-master { inherit (prev) system; inherit config; };
+            unstable = import nixpkgs-unstable { inherit (prev) system; inherit config; };
+
+            # Packages I want on the bleeding edge
+            kitty = final.unstable.kitty;
+            nixUnstable = final.unstable.nixUnstable;
+          }
+        )
+      ];
+    };
+
+    homeManagerCommonConfig = with self.homeManagerModules; {
+      imports = [
+        ./home
+        vim-envy
+      ];
+    };
+
+    # Modules shared by most `nix-darwin` personal configurations.
+    nixDarwinCommonModules = [
+      # Include extra `nix-darwin`
+      self.darwinModules.security.pam
+      self.darwinModules.users
+      self.darwinModules.mysql
+      self.darwinModules.mongodb
+
+      # Main `nix-darwin` config
+      ./darwin
+
+      # `home-manager` module
+      home-manager.darwinModules.home-manager
+      ( { config, lib, ... }: let inherit (config.users) primaryUser; in {
+        nixpkgs = nixpkgsConfig;
+        users.users.${primaryUser}.home = "/Users/${primaryUser}";
+        home-manager.useGlobalPkgs = true;
+        home-manager.users.${primaryUser} = homeManagerCommonConfig;
+      })
+    ];
+  in {
+
+    # Personal configuration ------------------------------------------------------------------- {{{
+
+    # My `nix-darwin` configs
+    darwinConfigurations = {
+      # Mininal configuration to bootstrap systems
+      bootstrap = darwin.lib.darwinSystem {
+        modules = [ ./darwin/bootstrap.nix { nixpkgs = nixpkgsConfig; } ];
       };
-      devShell = nixpkgs.legacyPackages.${system}.mkShell {
-        inherit (self.checks.${system}.pre-commit-check) shellHook;
+
+      # My macOS main laptop config
+      macbook = darwin.lib.darwinSystem {
+        modules = nixDarwinCommonModules ++ [
+          {
+            users.primaryUser = "maksar";
+            networking.computerName = "Maksar’s 💻";
+            networking.hostName = "MaksarBookPro";
+          }
+        ];
       };
-    });
+    };
+
+    overlays = with inputs; [
+      (
+        final: prev: {
+          # Some packages
+          comma = import comma { inherit (prev) pkgs; };
+          prefmanager = prefmanager.defaultPackage.${prev.system};
+        }
+      )
+    ];
+
+    # My `nix-darwin` modules that are pending upstream, or patched versions waiting on upstream fixes.
+    darwinModules = {
+      security.pam = import ./modules/darwin/pam.nix;
+      users = import ./modules/darwin/users.nix;
+      mysql = import ./modules/darwin/mysql.nix;
+      mongodb = import ./modules/darwin/mongodb.nix;
+    };
+
+    homeManagerModules = {
+      vim-envy = import "${envy}/home-manager.nix" {};
+    };
+  };
 }

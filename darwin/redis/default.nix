@@ -3,7 +3,7 @@
   services.redis = {
     enable = true;
     bind = "localhost";
-    dataDir = config.users.users.${config.mainUser}.home + "/.redis";
+    dataDir = config.users.users.${config.users.primaryUser}.home + "/.redis";
   };
 
 }

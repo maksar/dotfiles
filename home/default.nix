@@ -1,5 +1,13 @@
 { config, pkgs, ... }: {
-  imports = [ ./kitty ./vscode ./zsh ./neovim ./git ./bat ];
+  imports = [
+    ./kitty
+    ./vscode
+    ./zsh
+    ./neovim
+    ./git
+    ./bat
+    ./direnv
+    ];
 
   home.packages = with pkgs; [
     home-manager
@@ -14,23 +22,21 @@
     ranger
 
     nix-tree
+    nix-index
 
     pandoc
+
+    comma
+    prefmanager
   ];
 
   programs.man.enable = true;
   programs.autojump.enable = true;
   programs.jq.enable = true;
   programs.htop.enable = true;
+  programs.htop.settings.show_program_path = true;
   programs.dircolors.enable = true;
   programs.fzf.enable = true;
-  programs.direnv = {
-    enable = true;
-    nix-direnv = {
-      enable = true;
-      enableFlakes = true;
-    };
-  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage

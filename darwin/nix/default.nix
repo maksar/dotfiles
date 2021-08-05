@@ -1,14 +1,8 @@
 { config, pkgs, ... }: {
-  nixpkgs.config.allowUnfree = true;
 
-  # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
   nix.package = pkgs.nixUnstable;
   nix.useDaemon = true;
-  nix.nixPath = [
-    { darwin-config = "${config.environment.darwinConfig}"; }
-    "$HOME/.nix-defexpr/channels"
-  ];
   nix.trustedUsers = builtins.attrNames config.users.users;
   nix.gc.automatic = false;
   nix.extraOptions = ''
@@ -40,6 +34,10 @@
   users.nix.configureBuildUsers = true;
 
   nix.binaryCachePublicKeys =
-    [ "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=" ];
-  nix.binaryCaches = [ "https://hydra.iohk.io" ];
+    [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+    ];
+  nix.binaryCaches = [ "https://cache.nixos.org" "https://hydra.iohk.io" ];
+
+  programs.zsh.enable = true;
 }
