@@ -1,7 +1,3 @@
-# Usefull links
-# https://githubmemory.com/repo/hardselius/dotfiles
-# https://github.com/malob/nixpkgs
-
 {
   description = "Malo’s Nix system configs, and some other useful stuff.";
 
