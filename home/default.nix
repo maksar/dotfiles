@@ -28,6 +28,8 @@
 
     comma
     prefmanager
+
+    cachix
   ];
 
   programs.man.enable = true;

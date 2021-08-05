@@ -10,6 +10,7 @@
     "homebrew/cask-versions"
     "homebrew/cask-drivers"
     "microsoft/mssql-release"
+    "rkaippully/tools"
     # "homebrew/cask-fonts"
     # "homebrew/core"
     # "homebrew/services"
@@ -27,6 +28,7 @@
     "msodbcsql17"
 
     "nmap" # version in nixos doesn't work with big sur
+    "gamgee"
   ];
 
   homebrew.casks = [

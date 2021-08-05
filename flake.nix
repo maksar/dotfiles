@@ -84,7 +84,17 @@
     darwinConfigurations = {
       # Mininal configuration to bootstrap systems
       bootstrap = darwin.lib.darwinSystem {
-        modules = [ ./darwin/bootstrap.nix { nixpkgs = nixpkgsConfig; } ];
+        modules = [ ./darwin/nix { nixpkgs = nixpkgsConfig; } ];
+      };
+
+      # Config with small modifications needed/desired for CI with GitHub workflow
+      githubCI = darwin.lib.darwinSystem {
+        modules = nixDarwinCommonModules ++ [
+          ({ lib, ... }: {
+            users.primaryUser = "runner";
+            homebrew.enable = lib.mkForce false;
+          })
+        ];
       };
 
       # My macOS main laptop config

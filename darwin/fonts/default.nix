@@ -9,6 +9,7 @@
         src = pkgs.fetchzip {
           url =
             "https://www.dropbox.com/s/dl/mexic1tzi7sxtpt/${pname}-${version}.zip";
+          stripRoot = false;
           sha256 = "sha256-J51UWZrhPDsNnqN26i3RRJnM9GA9+Ynqp1eh1DR5cfA=";
         };
 
