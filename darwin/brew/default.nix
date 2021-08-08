@@ -43,7 +43,6 @@
     "zoom"
     "microsoft-teams"
     "miro"
-    "obs"
 
     # Utilities
     "dropbox"
@@ -61,10 +60,8 @@
     "tunnelbear"
 
     # Developer tools
-    "docker"
     "sourcetree"
     "charles"
-    "virtualbox"
     "jetbrains-toolbox"
     "typora"
 
@@ -73,6 +70,8 @@
     "vlc"
 
     "postman"
+
+    # "basecamp"
   ];
   homebrew.masApps = {
     "XCode" = 497799835;

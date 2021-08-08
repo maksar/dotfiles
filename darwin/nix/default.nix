@@ -12,7 +12,7 @@
   '';
   nix.buildCores = 6;
   nix.maxJobs = 6;
-  nix.distributedBuilds = true;
+  # nix.distributedBuilds = true;
   nix.buildMachines = [{
     hostName = "nix-docker";
     sshUser = "root";
