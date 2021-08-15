@@ -152,11 +152,11 @@
     },
     "nixos-stable": {
       "locked": {
-        "lastModified": 1628186972,
-        "narHash": "sha256-wWXlIQdZq/EtlBAGFJ62YHYEnJclxCuUOUGnrQqJ3zg=",
+        "lastModified": 1628865210,
+        "narHash": "sha256-dB3IA8AYUQDXH+Xy/6nbv4QpIbVl88DphbcxJSUYiX4=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "733682c32929293341f113f297b64ea6319e9089",
+        "rev": "a445f5829889959d65ad65e5c961d5c67e1cd677",
         "type": "github"
       },
       "original": {
@@ -168,11 +168,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1628168151,
-        "narHash": "sha256-wzmqM0H8yfOBu10wmUc5ykC2YmWzvE9PsLYnfuqrqhs=",
+        "lastModified": 1628948660,
+        "narHash": "sha256-Fkx4G1MLKxcd5E2EGCE5wo5K2d9jEuwsu+nv4eL222U=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "b2d256095aeac09f8af6b6c95ab3cf4bc5fd4e6f",
+        "rev": "4d5716f0f80c7c6fefd050ea6404d25cd6a39d9e",
         "type": "github"
       },
       "original": {
@@ -184,11 +184,11 @@
     },
     "nixpkgs-master": {
       "locked": {
-        "lastModified": 1628428994,
-        "narHash": "sha256-I8yLE+GyrU5wuzdk4lE/2NFlJoQJki+mMO+pS8wlPdQ=",
+        "lastModified": 1628985848,
+        "narHash": "sha256-QZR+vEpVDzEJ/XhjPIvtkYcuOXfWPG/BxMkwVm8JCps=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "48bc8a78654d5be9a20eb64bdb54472377301f3c",
+        "rev": "113c4107544ef5cf331176c7ab0ca1833bf6030d",
         "type": "github"
       },
       "original": {
@@ -200,11 +200,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1628320020,
-        "narHash": "sha256-4xBEb+TOHyIGpK37EVsZx6dGPwNMf5YWNBJaQ4VyZws=",
+        "lastModified": 1628934079,
+        "narHash": "sha256-CEYsKXNYprs/TvmB7ppkYMALXnfhEw6lg5VaEXgpoec=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "67c80531be622641b5b2ccc3a7aff355cb02476b",
+        "rev": "fd9984fd9a950686e7271ecf01893987a42cdf14",
         "type": "github"
       },
       "original": {
