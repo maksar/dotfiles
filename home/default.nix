@@ -27,7 +27,6 @@
     pandoc
 
     comma
-    prefmanager
 
     cachix
   ];
@@ -48,5 +47,5 @@
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "20.09";
+  home.stateVersion = "21.05";
 }

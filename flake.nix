@@ -105,6 +105,19 @@
       };
     };
 
+    # Config I use with Linux cloud VMs
+    # Build and activate with `nix build .#cloudVM.activationPackage; ./result/activate`
+    cloudVM = home-manager.lib.homeManagerConfiguration {
+      system = "x86_64-linux";
+      stateVersion = "21.05";
+      homeDirectory = "/home/maksar";
+      username = "maksar";
+      configuration = {
+        imports = [ homeManagerCommonConfig ];
+        nixpkgs = nixpkgsConfig;
+      };
+    };
+
     overlays = with inputs; [
       (
         final: prev: {

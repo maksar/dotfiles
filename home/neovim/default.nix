@@ -12,27 +12,27 @@ let
     dependencies = [ ];
   });
 
-  issw = (pkgs.stdenv.mkDerivation rec {
-    pname = "issw";
-    version = "v0.3";
+  # issw = (pkgs.stdenv.mkDerivation rec {
+  #   pname = "issw";
+  #   version = "v0.3";
 
-    src = pkgs.fetchFromGitHub {
-      owner = "vovkasm";
-      repo = "input-source-switcher";
-      rev = version;
-      sha256 = "sha256-JjMNdpqt10CHpUGt5kX15bVDmqm1CbD5lqyLlXY1Jfg=";
-    };
+  #   src = pkgs.fetchFromGitHub {
+  #     owner = "vovkasm";
+  #     repo = "input-source-switcher";
+  #     rev = version;
+  #     sha256 = "sha256-JjMNdpqt10CHpUGt5kX15bVDmqm1CbD5lqyLlXY1Jfg=";
+  #   };
 
-    nativeBuildInputs = [ pkgs.cmake ];
-    buildInputs = [ pkgs.darwin.apple_sdk.frameworks.Carbon ];
-  });
+  #   nativeBuildInputs = [ pkgs.cmake ];
+  #   buildInputs = [ pkgs.darwin.apple_sdk.frameworks.Carbon ];
+  # });
 
-  vim-xkbswitch-mac = pkgs.vimPlugins.vim-xkbswitch.overrideAttrs (old: {
-    patchPhase = ''
-      substituteInPlace plugin/xkbswitch.vim --replace /usr/local/lib/libxkbswitch.dylib ${issw}/lib/libInputSourceSwitcher.dylib
-    '';
-    buildInputs = [ issw ];
-  });
+  # vim-xkbswitch-mac = pkgs.vimPlugins.vim-xkbswitch.overrideAttrs (old: {
+  #   patchPhase = ''
+  #     substituteInPlace plugin/xkbswitch.vim --replace /usr/local/lib/libxkbswitch.dylib ${issw}/lib/libInputSourceSwitcher.dylib
+  #   '';
+  #   buildInputs = [ issw ];
+  # });
 in {
 
   home.packages = [ pkgs.nix-prefetch-git ];
@@ -77,11 +77,11 @@ in {
         '';
       };
 
-      vim-xkbswitch-mac = {
-        enable = true;
-        source = vim-xkbswitch-mac;
-        extraConfig = "let g:XkbSwitchEnabled = 1";
-      };
+      # vim-xkbswitch-mac = {
+      #   enable = true;
+      #   source = vim-xkbswitch-mac;
+      #   extraConfig = "let g:XkbSwitchEnabled = 1";
+      # };
 
       ctrlp-vim.enable = true;
       vim-nix.enable = true;

@@ -8,6 +8,7 @@
     envExtra = ''
       PATH=./bin/:$PATH
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+      . /etc/profile.d/nix.sh
     '';
     loginExtra = ''
       ${builtins.readFile ./.p10k.zsh}
