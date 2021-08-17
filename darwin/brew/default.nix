@@ -17,7 +17,6 @@
   ];
 
   environment.variables = {
-    HOMEBREW_NO_ENV_FILTERING = "1";
     HOMEBREW_ACCEPT_EULA = "Y";
     ACCEPT_EULA = "Y";
   };
@@ -34,6 +33,8 @@
   homebrew.casks = [
     # Drivers
     "logitech-options"
+    "intel-power-gadget"
+    "menumeters"
 
     # Communication
     "skype"
@@ -43,6 +44,7 @@
     "zoom"
     "microsoft-teams"
     "miro"
+    "basecamp"
 
     # Utilities
     "dropbox"
@@ -85,5 +87,8 @@
 
     # Apple
     "Pages" = 409201541;
+
+    # Other
+    "Harvest" = 506189836;
   };
 }

@@ -8,8 +8,8 @@
   ];
   programs.git = {
     enable = true;
-    userName = "Shestakov, Aleksandr";
-    userEmail = "a.shestakov@itransition.com";
+    userName = "Shestakov Alex";
+    userEmail = "Maksar.mail@gmail.com";
     package = pkgs.gitFull;
     extraConfig = {
       diff = { colorMoved = "default"; };
