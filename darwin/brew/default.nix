@@ -43,7 +43,6 @@
     "telegram"
     "zoom"
     "microsoft-teams"
-    "miro"
     "basecamp"
 
     # Utilities
@@ -51,6 +50,8 @@
     "1password"
     "alfred"
     "unshaky"
+    "rectangle"
+    "dash"
 
     # Browsers & network tools
     "openvpn-connect"
@@ -66,14 +67,13 @@
     "charles"
     "jetbrains-toolbox"
     "typora"
+    "postman"
 
     # Media
     "steam"
     "vlc"
 
-    "postman"
-
-    # "basecamp"
+    "basecamp"
   ];
   homebrew.masApps = {
     "XCode" = 497799835;

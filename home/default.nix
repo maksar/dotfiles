@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, system, ... }: {
+
   imports = [
     ./kitty
     ./vscode
@@ -8,7 +9,6 @@
     ./bat
     ./direnv
     ];
-
 
   home.file."Library/KeyBindings/DefaultKeyBinding.dict".text =
     ''
@@ -42,7 +42,6 @@
     pandoc
 
     comma
-    prefmanager
 
     cachix
   ];
@@ -50,10 +49,12 @@
   programs.man.enable = true;
   programs.autojump.enable = true;
   programs.jq.enable = true;
-  programs.htop.enable = true;
-  programs.htop.settings.show_program_path = true;
   programs.dircolors.enable = true;
   programs.fzf.enable = true;
+  programs.htop = {
+    enable = true;
+    settings.show_program_path = true;
+  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage

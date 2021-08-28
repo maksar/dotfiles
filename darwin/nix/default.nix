@@ -13,15 +13,15 @@
   nix.buildCores = 6;
   nix.maxJobs = 6;
   # nix.distributedBuilds = true;
-  nix.buildMachines = [{
-    hostName = "nix-docker";
-    sshUser = "root";
-    sshKey = "/etc/nix/docker_rsa";
-    systems = [ "x86_64-linux" ];
-    supportedFeatures = [ "big-parallel" ];
-    maxJobs = 6;
-    buildCores = 6;
-  }
+  # nix.buildMachines = [{
+  #   hostName = "nix-docker";
+  #   sshUser = "root";
+  #   sshKey = "/etc/nix/docker_rsa";
+  #   systems = [ "x86_64-linux" ];
+  #   supportedFeatures = [ "big-parallel" ];
+  #   maxJobs = 6;
+  #   buildCores = 6;
+  # }
   # {
   #   hostName = "eu.nixbuild.net";
   #   sshUser = "root";
@@ -30,7 +30,7 @@
   #   supportedFeatures = [ "big-parallel" "benchmark" ];
   #   maxJobs = 100;
   # }
-    ];
+    # ];
   users.nix.configureBuildUsers = true;
 
   nix.binaryCachePublicKeys =
