@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+a@{ config, pkgs, darwinConfig, ... }:
 let
   rigel = (pkgs.vimUtils.buildVimPluginFrom2Nix {
     pname = "rigel";
@@ -79,7 +79,7 @@ in {
 
       vim-xkbswitch-mac = {
         enable = true;
-        source = if (pkgs.lib.hasSuffix "linux" pkgs.self.system) then pkgs.vimPlugins.vim-xkbswitch else vim-xkbswitch-mac;
+        source = if (pkgs.lib.traceShowVal darwinConfig == "123") then pkgs.vimPlugins.vim-xkbswitch else vim-xkbswitch-mac;
         extraConfig = "let g:XkbSwitchEnabled = 1";
       };
 

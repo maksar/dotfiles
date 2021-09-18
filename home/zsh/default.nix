@@ -10,8 +10,9 @@
     envExtra = ''
       PATH=./bin/:$PATH
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-      ${if (pkgs.lib.hasSuffix "linux" pkgs.self.system) then ". /etc/profile.d/nix.sh" else ""}
     '';
+          # ${if ("i686-linux" == pkgs.self.system) then ". /etc/profile.d/nix.sh" else ""}
+
     loginExtra = ''
       ${builtins.readFile ./.p10k.zsh}
     '';
