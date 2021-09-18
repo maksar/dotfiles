@@ -17,7 +17,6 @@
   ];
 
   environment.variables = {
-    HOMEBREW_NO_ENV_FILTERING = "1";
     HOMEBREW_ACCEPT_EULA = "Y";
     ACCEPT_EULA = "Y";
   };
@@ -34,6 +33,8 @@
   homebrew.casks = [
     # Drivers
     "logitech-options"
+    "intel-power-gadget"
+    "menumeters"
 
     # Communication
     "skype"
@@ -42,13 +43,15 @@
     "telegram"
     "zoom"
     "microsoft-teams"
-    "miro"
+    "basecamp"
 
     # Utilities
     "dropbox"
     "1password"
     "alfred"
     "unshaky"
+    "rectangle"
+    "dash"
 
     # Browsers & network tools
     "openvpn-connect"
@@ -64,14 +67,13 @@
     "charles"
     "jetbrains-toolbox"
     "typora"
+    "postman"
 
     # Media
     "steam"
     "vlc"
 
-    "postman"
-
-    # "basecamp"
+    "basecamp"
   ];
   homebrew.masApps = {
     "XCode" = 497799835;
@@ -85,5 +87,8 @@
 
     # Apple
     "Pages" = 409201541;
+
+    # Other
+    "Harvest" = 506189836;
   };
 }

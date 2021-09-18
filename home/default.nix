@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, system, ... }: {
+
   imports = [
     ./kitty
     ./vscode
@@ -8,6 +9,20 @@
     ./bat
     ./direnv
     ];
+
+  home.file."Library/KeyBindings/DefaultKeyBinding.dict".text =
+    ''
+      {
+        "\UF729"  = moveToBeginningOfParagraph:; // home
+        "\UF72B"  = moveToEndOfParagraph:; // end
+        "$\UF729" = moveToBeginningOfParagraphAndModifySelection:; // shift-home
+        "$\UF72B" = moveToEndOfParagraphAndModifySelection:; // shift-end
+        "^\UF729" = moveToBeginningOfDocument:; // ctrl-home
+        "^\UF72B" = moveToEndOfDocument:; // ctrl-end
+        "^$\UF729" = moveToBeginningOfDocumentAndModifySelection:; // ctrl-shift-home
+        "^$\UF72B" = moveToEndOfDocumentAndModifySelection:; // ctrl-shift-end
+      }
+    '';
 
   home.packages = with pkgs; [
     home-manager
@@ -34,10 +49,12 @@
   programs.man.enable = true;
   programs.autojump.enable = true;
   programs.jq.enable = true;
-  programs.htop.enable = true;
-  programs.htop.settings.show_program_path = true;
   programs.dircolors.enable = true;
   programs.fzf.enable = true;
+  programs.htop = {
+    enable = true;
+    settings.show_program_path = true;
+  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage

@@ -5,6 +5,8 @@
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
+    enableCompletion = true;
+    enableSyntaxHighlighting = true;
     envExtra = ''
       PATH=./bin/:$PATH
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true

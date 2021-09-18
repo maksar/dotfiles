@@ -1,9 +1,9 @@
 {
-  description = "Malo’s Nix system configs, and some other useful stuff.";
+  description = "Maksar’s Nix system configs, and some other useful stuff.";
 
   inputs = {
     # Package sets
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-21.05-darwin";
+    nixpkgs.url = "github:nixos/nixpkgs/master";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
     nixos-stable.url = "github:nixos/nixpkgs/nixos-21.05";
@@ -11,7 +11,7 @@
     # Environment/system management
     darwin.url = "github:LnL7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
-    home-manager.url = "github:nix-community/home-manager/release-21.05";
+    home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # Other sources
