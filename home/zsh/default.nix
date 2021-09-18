@@ -8,7 +8,7 @@
     envExtra = ''
       PATH=./bin/:$PATH
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-      . /etc/profile.d/nix.sh
+      ${if (pkgs.lib.hasSuffix "linux" pkgs.self.system) then ". /etc/profile.d/nix.sh" else ""}
     '';
     loginExtra = ''
       ${builtins.readFile ./.p10k.zsh}

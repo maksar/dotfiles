@@ -139,5 +139,6 @@
     homeManagerModules = {
       vim-envy = import "${envy}/home-manager.nix" {};
     };
-  };
-}
+  } // flake-utils.lib.eachDefaultSystem (system: {
+      legacyPackages = import nixpkgs { inherit system; inherit (nixpkgsConfig) config overlays; };
+  });}
