@@ -36,9 +36,13 @@
           final: prev: {
             master = import nixpkgs-master { inherit (prev) system; inherit config; };
             unstable = import nixpkgs-unstable { inherit (prev) system; inherit config; };
+            stable = import nixos-stable { inherit (prev) system; inherit config; };
+
+            # Packages I want to never brake
+            kitty = final.stable.kitty;
+            vscode = final.stable.vscode;
 
             # Packages I want on the bleeding edge
-            kitty = final.unstable.kitty;
             nixUnstable = final.unstable.nixUnstable;
           }
         )
@@ -80,11 +84,13 @@
     darwinConfigurations = {
       # Mininal configuration to bootstrap systems
       bootstrap = darwin.lib.darwinSystem {
+        system = "x86_64-darwin";
         modules = [ ./darwin/nix { nixpkgs = nixpkgsConfig; } ];
       };
 
       # Config with small modifications needed/desired for CI with GitHub workflow
       githubCI = darwin.lib.darwinSystem {
+        system = "x86_64-darwin";
         modules = nixDarwinCommonModules ++ [
           ({ lib, ... }: {
             users.primaryUser = "runner";
@@ -95,6 +101,7 @@
 
       # My macOS main laptop config
       macbook = darwin.lib.darwinSystem {
+        system = "x86_64-darwin";
         modules = nixDarwinCommonModules ++ [
           {
             users.primaryUser = "maksar";

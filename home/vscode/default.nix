@@ -26,16 +26,6 @@
       "workbench.editor.enablePreview" = false;
       "workbench.iconTheme" = "vscode-icons-mac";
       "terminal.integrated.fontFamily" = "PragmataPro Liga";
-      "haskell.serverExecutablePath" = "haskell-language-server";
-      "haskell.formattingProvider" = "ormolu";
-      # "files.watcherExclude" = { "**/*" = true; };
-      "terraform.languageServer" = {
-        "external" = true;
-        "pathToBinary" = "terraform-lsp";
-        "args" = [ ];
-        "maxNumberOfProblems" = 100;
-        "trace.server" = "off";
-      };
     };
 
     keybindings = [{
