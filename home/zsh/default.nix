@@ -1,6 +1,6 @@
 { config, pkgs, home, ... }: {
 
-  home.packages = [ pkgs.exa pkgs.zsh-powerlevel10k ];
+  home.packages = [ pkgs.exa pkgs.zsh-powerlevel10k pkgs.neofetch ];
 
   programs.zsh = {
     enable = true;

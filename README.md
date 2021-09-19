@@ -19,7 +19,7 @@ Now you can go ahead and run the installer
 sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume --daemon
 ```
 
-This should take you throught the process in a nice and straight-forward way.
+This should take you through the process in a nice and straight-forward way.
 
 Once the installation finishes, it should print something like
 
@@ -85,7 +85,7 @@ Tada! Everything should be installed and ready to go.
 
 **NOTE:** It's a good idea to make sure that any existing installation of
 `nix-darwin` is uninstalled before you begin. There may be crap remaining in
-`/etc/static`. Also, you should remeber to backup existing etc files
+`/etc/static`. Also, you should remember to backup existing etc files
 
 ```
 $ sudo mv /etc/bashrc /etc/bashrc.backup-before-darwin

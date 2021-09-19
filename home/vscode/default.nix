@@ -26,6 +26,7 @@
       "workbench.editor.enablePreview" = false;
       "workbench.iconTheme" = "vscode-icons-mac";
       "terminal.integrated.fontFamily" = "PragmataPro Liga";
+      "remote.SSH.defaultExtensions" = map (e: "${e.publisher}.${e.name}") (import ./extensions.nix).extensions;
     };
 
     keybindings = [{

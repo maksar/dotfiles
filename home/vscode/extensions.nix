@@ -12,10 +12,10 @@
     sha256 = "1m6f6p7x8vshhb03ml7sra3v01a7i2p3064mvza800af7cyj3w5m";
   }
   {
-    name = "spellright";
-    publisher = "ban";
-    version = "3.0.60";
-    sha256 = "1p4zd917n0za6sf8xl3bl76xnmyb0d09n8kzrip4zq4k8ca8lp30";
+    name = "nix-env-selector";
+    publisher = "arrterian";
+    version = "1.0.7";
+    sha256 = "0mralimyzhyp4x9q98x3ck64ifbjqdp8cxcami7clvdvkmf8hxhf";
   }
   {
     name = "Nix";
@@ -124,6 +124,12 @@
     publisher = "sianglim";
     version = "0.1.2";
     sha256 = "0k63dh7j6k5ci9y3wy4nyawr2l5rszw7lwqngayn0nkwxpdjd23x";
+  }
+  {
+    name = "code-spell-checker";
+    publisher = "streetsidesoftware";
+    version = "2.0.5";
+    sha256 = "0018wbjry90643202r7ypwf24cvh2zrc12gmcl83fx8gnw7w2k71";
   }
   {
     name = "sass-indented";
