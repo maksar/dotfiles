@@ -102,18 +102,6 @@
     sha256 = "0016myd7halfmq0cdsdif9rdwld2v3h3zzp1lnpa9rvf6rfxrlhj";
   }
   {
-    name = "ruby";
-    publisher = "rebornix";
-    version = "0.28.1";
-    sha256 = "179g7nc6mf5rkha75v7rmb3vl8x4zc6qk1m0wn4pgylkxnzis18w";
-  }
-  {
-    name = "sass-indented";
-    publisher = "syler";
-    version = "1.8.18";
-    sha256 = "16gs9qnfq7hv94vnm4jjdbw0jnbp4cxf4bmp1ding4zcvjwran7y";
-  }
-  {
     name = "remote-ssh";
     publisher = "ms-vscode-remote";
     version = "0.65.8";
@@ -124,6 +112,24 @@
     publisher = "ms-vscode-remote";
     version = "0.65.8";
     sha256 = "07w085crhvp8wh3n1gyfhfailfq940rffpahsp5pv8j200v2s0js";
+  }
+  {
+    name = "ruby";
+    publisher = "rebornix";
+    version = "0.28.1";
+    sha256 = "179g7nc6mf5rkha75v7rmb3vl8x4zc6qk1m0wn4pgylkxnzis18w";
+  }
+  {
+    name = "slim";
+    publisher = "sianglim";
+    version = "0.1.2";
+    sha256 = "0k63dh7j6k5ci9y3wy4nyawr2l5rszw7lwqngayn0nkwxpdjd23x";
+  }
+  {
+    name = "sass-indented";
+    publisher = "syler";
+    version = "1.8.18";
+    sha256 = "16gs9qnfq7hv94vnm4jjdbw0jnbp4cxf4bmp1ding4zcvjwran7y";
   }
   {
     name = "vscode-icons-mac";

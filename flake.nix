@@ -43,9 +43,6 @@
             vscode = prev.vscode.overrideAttrs (o: {
               postPatch = "";
             });
-            vscodium = prev.vscodium.overrideAttrs (o: {
-              postPatch = "";
-            });
 
             # kitty = final.stable.kitty;
             # https://github.com/NixOS/nixpkgs/issues/137678
