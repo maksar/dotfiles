@@ -79,7 +79,7 @@ in {
 
       vim-xkbswitch-mac = {
         enable = true;
-        source = if (pkgs.lib.traceShowVal darwinConfig == "123") then pkgs.vimPlugins.vim-xkbswitch else vim-xkbswitch-mac;
+        source = if config.isLinux then pkgs.vimPlugins.vim-xkbswitch else vim-xkbswitch-mac;
         extraConfig = "let g:XkbSwitchEnabled = 1";
       };
 

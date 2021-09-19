@@ -73,7 +73,7 @@
         nixpkgs = nixpkgsConfig;
         users.users.${primaryUser}.home = "/Users/${primaryUser}";
         home-manager.useGlobalPkgs = true;
-        home-manager.users.${primaryUser} = homeManagerCommonConfig;
+        home-manager.users.${primaryUser} = homeManagerCommonConfig // { os = "darwin"; };
       })
     ];
   in {
@@ -107,6 +107,8 @@
             users.primaryUser = "maksar";
             networking.computerName = "Maksar’s 💻";
             networking.hostName = "MaksarBookPro";
+
+
           }
         ];
       };
@@ -119,6 +121,7 @@
       homeDirectory = "/home/maksar";
       username = "maksar";
       configuration = {
+        os = "linux";
         imports = [ homeManagerCommonConfig ];
         nixpkgs = nixpkgsConfig;
       };
