@@ -4,6 +4,7 @@
 
   programs.vscode = {
     enable = true;
+    package = pkgs.vscodium;
     userSettings = {
       "editor.renderWhitespace" = "all";
       "files.autoSave" = "onFocusChange";

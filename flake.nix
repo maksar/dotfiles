@@ -38,9 +38,25 @@
             unstable = import nixpkgs-unstable { inherit (prev) system; inherit config; };
             stable = import nixos-stable { inherit (prev) system; inherit config; };
 
-            # Packages I want to never brake
-            kitty = final.stable.kitty;
-            vscode = final.stable.vscode;
+            # vscode = final.stable.vscode;
+            # https://github.com/NixOS/nixpkgs/commit/ecf4ca4c2363373009f875732c832fe8d00f16b0
+            vscode = prev.vscode.overrideAttrs (o: {
+              postPatch = "";
+            });
+            vscodium = prev.vscodium.overrideAttrs (o: {
+              postPatch = "";
+            });
+
+            # kitty = final.stable.kitty;
+            # https://github.com/NixOS/nixpkgs/issues/137678
+            python39 = prev.python39.override {
+              packageOverrides = self: super: {
+                beautifulsoup4 = super.beautifulsoup4.overrideAttrs (old: {
+                  propagatedBuildInputs = prev.lib.remove super.lxml old.propagatedBuildInputs;
+                });
+              };
+            };
+            python39Packages = python39.pkgs;
 
             # Packages I want on the bleeding edge
             nixUnstable = final.unstable.nixUnstable;
