@@ -28,6 +28,7 @@
 
     "nmap" # version in nixos doesn't work with big sur
     "gamgee"
+    "scw"
   ];
 
   homebrew.casks = [

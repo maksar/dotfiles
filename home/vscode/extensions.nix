@@ -1,5 +1,11 @@
 { extensions = [
   {
+    name = "rainbow-brackets";
+    publisher = "2gua";
+    version = "0.0.6";
+    sha256 = "1m5c7jjxphawh7dmbzmrwf60dz4swn8c31svbzb5nhaazqbnyl2d";
+  }
+  {
     name = "terraform";
     publisher = "4ops";
     version = "0.2.2";
@@ -68,14 +74,14 @@
   {
     name = "terraform";
     publisher = "hashicorp";
-    version = "2.14.0";
-    sha256 = "1q43a28l6xfp3yw6wlr1kcidik0dbp8b7lg9vc83rhw4rjgvjsfm";
+    version = "2.15.0";
+    sha256 = "0bqf9ry0idqw61714dc6y1rh5js35mi14q19yqhiwayyfakwraq9";
   }
   {
     name = "haskell";
     publisher = "haskell";
-    version = "1.6.1";
-    sha256 = "1l6nrbqkq1p62dkmzs4sy0rxbid3qa1104s3fd9fzkmc1sldzgsn";
+    version = "1.7.1";
+    sha256 = "11myrk3hcc2hdw2n07w092s78aa6igpm7rgvn7ac9rbkkvc66rsi";
   }
   {
     name = "haskell-linter";
@@ -114,6 +120,12 @@
     sha256 = "07w085crhvp8wh3n1gyfhfailfq940rffpahsp5pv8j200v2s0js";
   }
   {
+    name = "indent-rainbow";
+    publisher = "oderwat";
+    version = "8.1.0";
+    sha256 = "0mk1p79a2v3zwzd8bihp2wmnkfk19rglyzpjjxizl6qkhyb0qccp";
+  }
+  {
     name = "ruby";
     publisher = "rebornix";
     version = "0.28.1";
@@ -128,8 +140,8 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "2.0.5";
-    sha256 = "0018wbjry90643202r7ypwf24cvh2zrc12gmcl83fx8gnw7w2k71";
+    version = "2.0.7";
+    sha256 = "1q4wksw0aw99laa0y9vkvaxm5d928ym1ri837zk3wfad3n063xzg";
   }
   {
     name = "sass-indented";
