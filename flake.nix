@@ -40,9 +40,9 @@
 
             # vscode = final.stable.vscode;
             # https://github.com/NixOS/nixpkgs/commit/ecf4ca4c2363373009f875732c832fe8d00f16b0
-            vscode = prev.vscode.overrideAttrs (o: {
-              postPatch = "";
-            });
+            # vscode = prev.vscode.overrideAttrs (o: {
+            #   postPatch = "";
+            # });
 
             # kitty = final.stable.kitty;
             # https://github.com/NixOS/nixpkgs/issues/137678

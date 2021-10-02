@@ -90,6 +90,12 @@
     sha256 = "0fb71cbjx1pyrjhi5ak29wj23b874b5hqjbh68njs61vkr3jlf1j";
   }
   {
+    name = "vscode-peacock";
+    publisher = "johnpapa";
+    version = "3.10.0";
+    sha256 = "0zgbcgnk0n3svi7x7gxy91nwnafg9qvxh67j190dj588qw3lskry";
+  }
+  {
     name = "language-haskell";
     publisher = "justusadam";
     version = "3.4.0";
@@ -140,8 +146,8 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "2.0.7";
-    sha256 = "1q4wksw0aw99laa0y9vkvaxm5d928ym1ri837zk3wfad3n063xzg";
+    version = "2.0.8";
+    sha256 = "165yfw25z9rdcb3qbc38gfgs88mmam8m4sa3sq3g0fsapipar5cr";
   }
   {
     name = "sass-indented";
