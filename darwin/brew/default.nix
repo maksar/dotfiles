@@ -53,6 +53,7 @@
     "unshaky"
     "rectangle"
     "dash"
+    "xbar"
 
     # Browsers & network tools
     "openvpn-connect"

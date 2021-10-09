@@ -70,7 +70,7 @@ in {
         enable = true;
         source = rigel;
         extraConfig = ''
-          set termguicolors
+          set notermguicolors
           syntax enable
 
           colorscheme rigel
