@@ -31,6 +31,7 @@
     comma
 
     cachix
+    autossh # [TODO] Configure a autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" in ssh config
   ];
 
   programs.man.enable = true;

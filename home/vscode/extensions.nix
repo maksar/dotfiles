@@ -68,14 +68,14 @@
   {
     name = "gitlens";
     publisher = "eamodio";
-    version = "11.6.0";
-    sha256 = "0lhrw24ilncdczh90jnjx71ld3b626xpk8b9qmwgzzhby89qs417";
+    version = "11.6.1";
+    sha256 = "0nghanaxa5db7lxfi4nly45iaps560zkwsfhmzhiiaan0hj0qmcs";
   }
   {
     name = "terraform";
     publisher = "hashicorp";
-    version = "2.15.0";
-    sha256 = "0bqf9ry0idqw61714dc6y1rh5js35mi14q19yqhiwayyfakwraq9";
+    version = "2.16.0";
+    sha256 = "0ya0xmmn4rmbvh8mxz466msbb3y2xqi4bg9dgymy2wq8cwzbn81b";
   }
   {
     name = "haskell";
@@ -92,8 +92,8 @@
   {
     name = "vscode-peacock";
     publisher = "johnpapa";
-    version = "3.10.0";
-    sha256 = "0zgbcgnk0n3svi7x7gxy91nwnafg9qvxh67j190dj588qw3lskry";
+    version = "3.10.1";
+    sha256 = "14ixma4xzz521vsrsd23vfwy16h9srscwxs97z1i9frglfx5ljam";
   }
   {
     name = "language-haskell";
@@ -126,10 +126,16 @@
     sha256 = "07w085crhvp8wh3n1gyfhfailfq940rffpahsp5pv8j200v2s0js";
   }
   {
+    name = "resourcemonitor";
+    publisher = "mutantdino";
+    version = "1.0.7";
+    sha256 = "03dqa381qcx07xhwis5ja8scskxl61shj7ax945ajydynyr7a66g";
+  }
+  {
     name = "indent-rainbow";
     publisher = "oderwat";
-    version = "8.1.0";
-    sha256 = "0mk1p79a2v3zwzd8bihp2wmnkfk19rglyzpjjxizl6qkhyb0qccp";
+    version = "8.2.2";
+    sha256 = "1xxljwh66f21fzmhw8icrmxxmfww1s67kf5ja65a8qb1x1rhjjgf";
   }
   {
     name = "ruby";
@@ -146,14 +152,20 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "2.0.8";
-    sha256 = "165yfw25z9rdcb3qbc38gfgs88mmam8m4sa3sq3g0fsapipar5cr";
+    version = "2.0.12";
+    sha256 = "17mrlldwfzmwh05hhdjzw1cdg5g985wp0iv2n7vvyz75q84hkpyj";
   }
   {
     name = "sass-indented";
     publisher = "syler";
     version = "1.8.18";
     sha256 = "16gs9qnfq7hv94vnm4jjdbw0jnbp4cxf4bmp1ding4zcvjwran7y";
+  }
+  {
+    name = "errorlens";
+    publisher = "usernamehw";
+    version = "3.4.0";
+    sha256 = "1x9rkyhbp15dwp6dikzpk9lzjnh9cnxac89gzx533681zld906m8";
   }
   {
     name = "vscode-icons-mac";
