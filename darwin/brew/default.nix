@@ -45,6 +45,7 @@
     "zoom"
     "microsoft-teams"
     "basecamp"
+    "mimestream"
 
     # Utilities
     "dropbox"
