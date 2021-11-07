@@ -62,8 +62,8 @@
   {
     name = "githistory";
     publisher = "donjayamanne";
-    version = "0.6.18";
-    sha256 = "01lc9gpqdjy6himn7jsfjrfz8xrk728c20903lxkxy5fliv232gz";
+    version = "0.6.19";
+    sha256 = "15s2mva9hg2pw499g890v3jycncdps2dmmrmrkj3rns8fkhjn8b3";
   }
   {
     name = "gitlens";
@@ -114,16 +114,22 @@
     sha256 = "0016myd7halfmq0cdsdif9rdwld2v3h3zzp1lnpa9rvf6rfxrlhj";
   }
   {
+    name = "remote-containers";
+    publisher = "ms-vscode-remote";
+    version = "0.205.1";
+    sha256 = "1sciyp24p75k1h1hxr43pjnj9hh5ldxv9a2fbc45y7l0vrxk48lg";
+  }
+  {
     name = "remote-ssh";
     publisher = "ms-vscode-remote";
-    version = "0.65.8";
-    sha256 = "0csi4mj2j00irjaw6vjmyadfbpmxxcx73idlhab6d9y0042mpr0g";
+    version = "0.66.0";
+    sha256 = "04jgn88b1j10qas4n6icg1zfvqqbxxmnjpvvkxdjgp845530k708";
   }
   {
     name = "remote-ssh-edit";
     publisher = "ms-vscode-remote";
-    version = "0.65.8";
-    sha256 = "07w085crhvp8wh3n1gyfhfailfq940rffpahsp5pv8j200v2s0js";
+    version = "0.66.0";
+    sha256 = "09i2dvh595lilji6xgzliz6965yw92kfq6n8lkcmrkk4p8bhk5jl";
   }
   {
     name = "resourcemonitor";

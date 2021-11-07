@@ -39,13 +39,13 @@
             stable = import nixos-stable { inherit (prev) system; inherit config; };
 
             # https://github.com/NixOS/nixpkgs/issues/137678
-            python39 = prev.python39.override {
-              packageOverrides = self: super: {
-                beautifulsoup4 = super.beautifulsoup4.overrideAttrs (old: {
-                  disabledTests = ["test_lxml"];
-                });
-              };
-            };
+            # python39 = prev.python39.override {
+            #   packageOverrides = self: super: {
+            #     beautifulsoup4 = super.beautifulsoup4.overrideAttrs (old: {
+            #       disabledTests = ["test_lxml"];
+            #     });
+            #   };
+            # };
           }
         )
       ];
