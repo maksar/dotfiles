@@ -15,6 +15,8 @@
     home-manager
 
     ctop
+    lazydocker
+    dive
 
     telnet
     asciinema
@@ -26,11 +28,10 @@
     nix-tree
     nix-index
 
-    pandoc
-
     comma
 
     cachix
+    awscli
     autossh # [TODO] Configure a autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" in ssh config
   ];
 

@@ -30,7 +30,7 @@
       enable = true;
       options = {
         line-numbers = true;
-        side-by-side = true;
+        navigate = true;
       };
     };
   };
