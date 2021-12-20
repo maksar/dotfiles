@@ -34,10 +34,9 @@
   users.nix.configureBuildUsers = true;
 
   nix.binaryCachePublicKeys =
-    [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-      "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+    [ "soostone.com-1:HH1l8F1W1Wt4xW7LBVj3dBlesomw5Qscl66upQkvPMk="
     ];
-  nix.binaryCaches = [ "https://cache.nixos.org" "https://hydra.iohk.io" "https://maksar.cachix.org" ];
+  nix.binaryCaches = [ "https://cache.nixos.org" "s3://soostone-nix-cache?profile=soostone" ];
 
   programs.zsh.enable = true;
 }
