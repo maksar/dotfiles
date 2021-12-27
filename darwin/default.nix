@@ -9,6 +9,6 @@
     ./postgresql
     ./redis
     ./mysql
-    ./mongodb
+    # ./mongodb
   ];
 }

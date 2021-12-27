@@ -72,6 +72,18 @@
     sha256 = "0apjjlfdwljqih394ggz2d8m599pyyjrb0b4cfcz83601b7hk3x6";
   }
   {
+    name = "ginfuru-vscode-jekyll-syntax";
+    publisher = "ginfuru";
+    version = "0.1.1";
+    sha256 = "02byyfl4iynnz53dvyagfxawbznxypd1ya06kp6w66i5ch4s3544";
+  }
+  {
+    name = "vscode-jekyll-snippets";
+    publisher = "ginfuru";
+    version = "0.9.3";
+    sha256 = "19lh4mxfqwh6719vl68xrd499j5hc09gzl4scnlvrpbg2iz3ymmz";
+  }
+  {
     name = "terraform";
     publisher = "hashicorp";
     version = "2.17.0";
@@ -116,20 +128,20 @@
   {
     name = "remote-containers";
     publisher = "ms-vscode-remote";
-    version = "0.209.1";
-    sha256 = "03ad8jrvl291lmhpw87np49791fnrnnqlwkjy4gv1pd16dcia4xz";
+    version = "0.209.6";
+    sha256 = "1dvma7mm0g6mr6yjfy0zbn0k143ag8p40r0kcb9n441w2r817rj8";
   }
   {
     name = "remote-ssh";
     publisher = "ms-vscode-remote";
-    version = "0.66.1";
-    sha256 = "0qj2ihl74bk1fbixv0g1qzdvaxh4skqww22dyaf17rs6cjf19zps";
+    version = "0.71.2021121615";
+    sha256 = "1lh08157z7lialb0dxls9fhahmf5l9wz6x2anwrnycvs512lpr1p";
   }
   {
     name = "remote-ssh-edit";
     publisher = "ms-vscode-remote";
-    version = "0.66.1";
-    sha256 = "04sznznvgnp4x7w9mld3j02f9kkx6bxr95knjzbyi1az37bbbmyk";
+    version = "0.71.2021121615";
+    sha256 = "0ymrfsvls2y9dzhxx71kb3jqm7vznj1z39nb89pykyk76jsn70gv";
   }
   {
     name = "resourcemonitor";
@@ -164,8 +176,8 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "2.0.13";
-    sha256 = "0r5l8fi68j3i2qy453lwxf7z8f476pvcps1pn6aaz50yc71bv3cq";
+    version = "2.0.14";
+    sha256 = "0y3xw0490n35138z964ai97mfw9b2v0a7a74abkxmkns1fqjq1wv";
   }
   {
     name = "sass-indented";

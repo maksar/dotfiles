@@ -3,10 +3,10 @@
 
   inputs = {
     # Package sets
-    nixpkgs.url = "github:nixos/nixpkgs/master";
+    nixpkgs.url = "github:nixos/nixpkgs/release-21.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
-    nixos-stable.url = "github:nixos/nixpkgs/nixos-21.05";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/release-21.11";
 
     # Environment/system management
     darwin.url = "github:LnL7/nix-darwin";
@@ -36,7 +36,11 @@
           final: prev: {
             master = import nixpkgs-master { inherit (prev) system; inherit config; };
             unstable = import nixpkgs-unstable { inherit (prev) system; inherit config; };
-            stable = import nixos-stable { inherit (prev) system; inherit config; };
+            stable = import nixpkgs-stable { inherit (prev) system; inherit config; };
+
+            libjxl = prev.libjxl.overrideAttrs (o: {
+              doCheck = false;
+            });
 
             # https://github.com/NixOS/nixpkgs/issues/137678
             # python39 = prev.python39.override {
@@ -64,7 +68,7 @@
       self.darwinModules.security.pam
       self.darwinModules.users
       self.darwinModules.mysql
-      self.darwinModules.mongodb
+      # self.darwinModules.mongodb
 
       # Main `nix-darwin` config
       ./darwin
@@ -144,7 +148,7 @@
       security.pam = import ./modules/darwin/pam.nix;
       users = import ./modules/darwin/users.nix;
       mysql = import ./modules/darwin/mysql.nix;
-      mongodb = import ./modules/darwin/mongodb.nix;
+      # mongodb = import ./modules/darwin/mongodb.nix;
     };
 
     homeManagerModules = {

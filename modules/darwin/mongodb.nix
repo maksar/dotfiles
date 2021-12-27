@@ -22,7 +22,7 @@ in {
       package = mkOption {
         type = types.package;
         default = pkgs.mongodb;
-        defaultText = "pkgs.mariadb";
+        defaultText = "pkgs.mongodb";
         description = "mongodb package to use.";
       };
 
