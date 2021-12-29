@@ -3,7 +3,7 @@
 
   inputs = {
     # Package sets
-    nixpkgs.url = "github:nixos/nixpkgs/release-21.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
     nixpkgs-stable.url = "github:nixos/nixpkgs/release-21.11";
@@ -113,8 +113,6 @@
             users.primaryUser = "maksar";
             networking.computerName = "Maksar’s 💻";
             networking.hostName = "MaksarBookPro";
-
-
           }
         ];
       };
