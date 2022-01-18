@@ -60,6 +60,18 @@
     sha256 = "1kh4wz7fiafm95wln9npabplnsldbxv2n3h5wjp34w91vl4x0q19";
   }
   {
+    name = "vscode-svgviewer";
+    publisher = "cssho";
+    version = "2.0.0";
+    sha256 = "06swlqiv3gc7plcbmzz795y6zwpxsdhg79k1n3jj6qngfwnv2p6z";
+  }
+  {
+    name = "vscode-quick-select";
+    publisher = "dbankier";
+    version = "0.2.9";
+    sha256 = "1h01a714rk2mx9m4r13iqvf2r057k50a1f72aixrcxlr9xfs7v2x";
+  }
+  {
     name = "githistory";
     publisher = "donjayamanne";
     version = "0.6.19";
@@ -86,8 +98,8 @@
   {
     name = "terraform";
     publisher = "hashicorp";
-    version = "2.17.0";
-    sha256 = "00c31ll9lc48lrlls26c35pwxjiz19hqj4mpvrqb0v92avb71691";
+    version = "2.18.0";
+    sha256 = "16f51zb1h4k2ikzk1vwyxlgysi7hg4jsizr6gpdn1f1hq311y3ld";
   }
   {
     name = "haskell";
@@ -128,8 +140,8 @@
   {
     name = "remote-containers";
     publisher = "ms-vscode-remote";
-    version = "0.209.6";
-    sha256 = "1dvma7mm0g6mr6yjfy0zbn0k143ag8p40r0kcb9n441w2r817rj8";
+    version = "0.212.0";
+    sha256 = "0b6bycjbkx1rgbyi48kszyngzm85ii03am9l83kp2kba113x1fy3";
   }
   {
     name = "remote-ssh";
@@ -162,10 +174,16 @@
     sha256 = "179g7nc6mf5rkha75v7rmb3vl8x4zc6qk1m0wn4pgylkxnzis18w";
   }
   {
+    name = "vscode-xml";
+    publisher = "redhat";
+    version = "0.18.2";
+    sha256 = "0347zdvgz9gjb9kxwxl2xcp7zmffjs7zzm0i4vv7x7wqva2acxk5";
+  }
+  {
     name = "vscode-yaml";
     publisher = "redhat";
-    version = "1.2.2";
-    sha256 = "06n4fxqr3lqmiyns9jdk3rdnanamcpzhrivllai8z9d997xmwcx6";
+    version = "1.3.0";
+    sha256 = "1b9kl8ziz299451bsmn1crj8j1n2r611lcw2f7y3j0alq0nrngjg";
   }
   {
     name = "slim";
@@ -176,8 +194,8 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "2.0.14";
-    sha256 = "0y3xw0490n35138z964ai97mfw9b2v0a7a74abkxmkns1fqjq1wv";
+    version = "2.1.4";
+    sha256 = "1y0gfdr8kw3rjp47p9lxnylpwl1pd5wfr2zvl7i3hws39gya1jsp";
   }
   {
     name = "sass-indented";
