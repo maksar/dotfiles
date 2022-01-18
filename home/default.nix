@@ -22,6 +22,7 @@
     asciinema
     tree
     ag
+    fx
 
     ranger
 
@@ -31,7 +32,7 @@
     comma
 
     cachix
-    awscli
+    awscli2
     autossh # [TODO] Configure a autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" in ssh config
   ];
 

@@ -39,6 +39,8 @@ in {
   sn.programs.neovim = {
     extraConfig = builtins.readFile ./vimrc;
 
+    baseVimPlugins = (pkgs.lib.filterAttrs (k: v: k != "onedark-nvim" && !(builtins.elem k (pkgs.lib.attrNames (builtins.fromJSON (builtins.readFile (pkgs.path + "/pkgs/misc/vim-plugins/deprecated.json")))))) pkgs.vimPlugins);
+
     pluginRegistry = {
       vim-devicons = {
         enable = true;
@@ -62,7 +64,6 @@ in {
         extraConfig = ''
           let g:airline_powerline_fonts = 1
           let g:airline#extensions#tabline#enabled = 1
-
         '';
       };
 
