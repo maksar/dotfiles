@@ -23,6 +23,7 @@
     tree
     ag
     fx
+    envsubst
 
     ranger
 
