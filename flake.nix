@@ -1,12 +1,12 @@
 {
-  description = "Maksar’s Nix system configs, and some other useful stuff.";
+  description = "Maksar Nix system configs, and some other useful stuff.";
 
   inputs = {
     # Package sets
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/21.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/release-21.11";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/21.11";
 
     # Environment/system management
     darwin.url = "github:LnL7/nix-darwin";
@@ -15,7 +15,8 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # Other sources
-    comma = { url = "github:Shopify/comma"; flake = false; };
+    comma.url = "github:DavHau/comma/flake";
+    comma.inputs.nixpkgs.follows = "nixpkgs";
 
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
     flake-utils.url = "github:numtide/flake-utils";
@@ -33,14 +34,14 @@
       config = { allowUnfree = true; };
       overlays = self.overlays ++ [
         (
-          final: prev: {
+          final: prev: rec {
             master = import nixpkgs-master { inherit (prev) system; inherit config; };
             unstable = import nixpkgs-unstable { inherit (prev) system; inherit config; };
             stable = import nixpkgs-stable { inherit (prev) system; inherit config; };
 
-            libjxl = prev.libjxl.overrideAttrs (o: {
-              doCheck = false;
-            });
+            # libjxl = prev.libjxl.overrideAttrs (o: {
+            #   doCheck = false;
+            # });
 
             # https://github.com/NixOS/nixpkgs/issues/137678
             # python39 = prev.python39.override {
@@ -67,7 +68,7 @@
       # Include extra `nix-darwin`
       self.darwinModules.security.pam
       self.darwinModules.users
-      self.darwinModules.mysql
+      # self.darwinModules.mysql
       # self.darwinModules.mongodb
 
       # Main `nix-darwin` config
@@ -111,7 +112,7 @@
         modules = nixDarwinCommonModules ++ [
           {
             users.primaryUser = "maksar";
-            networking.computerName = "Maksar’s 💻";
+            networking.computerName = "Maksar 💻";
             networking.hostName = "MaksarBookPro";
           }
         ];
@@ -145,7 +146,7 @@
     darwinModules = {
       security.pam = import ./modules/darwin/pam.nix;
       users = import ./modules/darwin/users.nix;
-      mysql = import ./modules/darwin/mysql.nix;
+      # mysql = import ./modules/darwin/mysql.nix;
       # mongodb = import ./modules/darwin/mongodb.nix;
     };
 

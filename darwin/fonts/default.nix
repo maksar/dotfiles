@@ -15,7 +15,6 @@
 
         installPhase = ''
           mkdir -p $out/share/fonts
-          ls
           install -m644 Pragmata/*.ttf $out/share/fonts/
         '';
       })

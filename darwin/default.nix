@@ -7,8 +7,8 @@
     ./fonts
     ./macos
     ./postgresql
-    ./redis
-    ./mysql
+    # ./redis
+    # ./mysql
     # ./mongodb
   ];
 }

@@ -10,7 +10,7 @@
     envExtra = ''
       PATH=./bin/:$PATH
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-      ${if config.isLinux then ". /etc/profile.d/nix.sh" else ""}
+      ${if config.isLinux then ". .nix-profile/etc/profile.d/nix.sh" else ""}
     '';
 
     loginExtra = ''

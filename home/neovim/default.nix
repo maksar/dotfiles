@@ -39,7 +39,7 @@ in {
   sn.programs.neovim = {
     extraConfig = builtins.readFile ./vimrc;
 
-    baseVimPlugins = (pkgs.lib.filterAttrs (k: v: k != "onedark-nvim" && !(builtins.elem k (pkgs.lib.attrNames (builtins.fromJSON (builtins.readFile (pkgs.path + "/pkgs/misc/vim-plugins/deprecated.json")))))) pkgs.vimPlugins);
+    # baseVimPlugins = (pkgs.lib.filterAttrs (k: v: k != "onedark-nvim" && !(builtins.elem k (pkgs.lib.attrNames (builtins.fromJSON (builtins.readFile (pkgs.path + "/pkgs/misc/vim-plugins/deprecated.json")))))) pkgs.vimPlugins);
 
     pluginRegistry = {
       vim-devicons = {
