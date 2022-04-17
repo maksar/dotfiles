@@ -10,6 +10,7 @@
     envExtra = ''
       PATH=./bin/:$PATH
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+      ${builtins.readFile ./.p10k.zsh}
       ${if config.isLinux then ". .nix-profile/etc/profile.d/nix.sh" else ""}
     '';
 

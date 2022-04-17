@@ -13,7 +13,7 @@
     package = pkgs.gitFull;
     extraConfig = {
       diff = { colorMoved = "default"; };
-      pull = { ff = "only"; };
+      pull = { rebase = "true"; };
     };
     aliases = {
       s = "status";

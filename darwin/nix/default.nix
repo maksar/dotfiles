@@ -10,8 +10,8 @@
     gc-keep-outputs = true
     experimental-features = nix-command flakes
   '';
-  nix.buildCores = 6;
-  nix.maxJobs = 2;
+  nix.buildCores = 1;
+  nix.maxJobs = 4;
   # nix.distributedBuilds = true;
   # nix.buildMachines = [{
   #   hostName = "nix-docker";

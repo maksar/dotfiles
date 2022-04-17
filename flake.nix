@@ -39,6 +39,8 @@
             unstable = import nixpkgs-unstable { inherit (prev) system; inherit config; };
             stable = import nixpkgs-stable { inherit (prev) system; inherit config; };
 
+            nix-direnv = unstable.nix-direnv;
+
             # libjxl = prev.libjxl.overrideAttrs (o: {
             #   doCheck = false;
             # });

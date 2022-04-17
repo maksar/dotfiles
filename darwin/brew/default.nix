@@ -46,6 +46,7 @@
     "microsoft-teams"
     "basecamp"
     "mimestream"
+    "whatsapp"
 
     # Utilities
     "dropbox"
@@ -60,6 +61,7 @@
     "openvpn-connect"
     "firefox"
     "google-chrome"
+    "brave-browser"
     "vivaldi"
     "safari-technology-preview"
     "transmission"
