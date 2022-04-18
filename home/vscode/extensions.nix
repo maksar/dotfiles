@@ -84,12 +84,6 @@
     sha256 = "1d7gzxsyxrhvvx2md6gbcwiawd8f3jarxfbv2qhj7xl1phd7zja3";
   }
   {
-    name = "syntax-highlighter";
-    publisher = "evgeniypeshkov";
-    version = "0.5.0";
-    sha256 = "183lywllrsjgv4mn5f17czfdl0fzy3ih080mlny70mibvlijwxfr";
-  }
-  {
     name = "ginfuru-vscode-jekyll-syntax";
     publisher = "ginfuru";
     version = "0.1.1";
