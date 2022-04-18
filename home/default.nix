@@ -18,11 +18,11 @@
     lazydocker
     dive
 
-    telnet
+    inetutils
     speedtest-cli
     asciinema
     tree
-    ag
+    silver-searcher
     fx
     envsubst
 
