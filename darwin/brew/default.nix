@@ -23,11 +23,11 @@
 
   homebrew.brews = [
     # MSSQL connection drivers
-    "unixodbc"
-    "msodbcsql17"
+    # "unixodbc"
+    # "msodbcsql17"
 
     "nmap" # version in nixos doesn't work with big sur
-    "gamgee"
+    # "gamgee"
     "scw"
   ];
 
