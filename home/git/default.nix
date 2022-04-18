@@ -26,12 +26,9 @@
     };
     ignores = [ "*~" ".DS_Store" ];
     lfs = { enable = true; };
-    delta = {
+    difftastic = {
       enable = true;
-      options = {
-        line-numbers = true;
-        navigate = true;
-      };
+      background = "dark";
     };
   };
 }
