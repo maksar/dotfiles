@@ -98,20 +98,20 @@
   {
     name = "gitlab-workflow";
     publisher = "GitLab";
-    version = "3.42.1";
-    sha256 = "139ailbc10ybwgfpyq0wvh95irzxhsld9asc2bjqmb05hh7k78fz";
+    version = "3.43.1";
+    sha256 = "0n7qsqbaw8w9spdix37688wxa35002mdg7zi3wwkg4wdnwkhqz5q";
   }
   {
     name = "terraform";
     publisher = "hashicorp";
-    version = "2.21.0";
-    sha256 = "0kjw2q0rssrw6wz07xsa37c9hh2a1nj98zqxb6x6lc5myp957j4q";
+    version = "2.22.0";
+    sha256 = "sha256-wCxQvoVNSG5df57+QOj2R3cJIgiNKLiZWFOpzOc8KFQ=";
   }
   {
     name = "haskell";
     publisher = "haskell";
-    version = "2.1.1";
-    sha256 = "0rx783bkz41nb94j2syih6s24yp3wpf4m6lmdj8vv4x750chxa2z";
+    version = "2.2.0";
+    sha256 = "0qgp93m5d5kz7bxlnvlshcd8ms5ag48nk5hb37x02giqcavg4qv0";
   }
   {
     name = "haskell-linter";
@@ -152,8 +152,8 @@
   {
     name = "remote-containers";
     publisher = "ms-vscode-remote";
-    version = "0.232.6";
-    sha256 = "1jl9053x25bl095b6465i2cjqn3d06dmdy3z2mqhmazb0ihbd0rf";
+    version = "0.233.1";
+    sha256 = "1m7nzs1a9zm80jh4gmzz3b3hx4nwz83prbpb8442rmzabmprljl9";
   }
   {
     name = "remote-ssh";
@@ -200,8 +200,8 @@
   {
     name = "vscode-yaml";
     publisher = "redhat";
-    version = "1.6.0";
-    sha256 = "123ycy1lky6gcz22gp2zc0y2wiyq97v85p2dxhdsm5dqf6bxjz1q";
+    version = "1.7.0";
+    sha256 = "1bbjpaypp0mq5akww5f0pkpq01j0xhhvkfr44f4lb2rdhr5nmnvc";
   }
   {
     name = "sql-bigquery";
@@ -238,6 +238,12 @@
     publisher = "usernamehw";
     version = "3.4.2";
     sha256 = "1ifz0iyc7zknb07qx2fixg3qw9i69pvr12rlg2yvg1s8paj8mnbx";
+  }
+  {
+    name = "stylish-haskell";
+    publisher = "vigoo";
+    version = "0.0.10";
+    sha256 = "1zkvcan7zmgkg3cbzw6qfrs3772i0dwhnywx1cgwhy39g1l62r0q";
   }
   {
     name = "haskell-spotlight";

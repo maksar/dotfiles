@@ -77,6 +77,7 @@
     # Media
     "steam"
     "vlc"
+    "spotify"
 
     "basecamp"
   ];
