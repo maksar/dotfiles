@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   fonts = {
-    enableFontDir = true;
+    fontDir.enable = true;
     fonts = [
       (pkgs.stdenv.mkDerivation rec {
         pname = "pragmata-pro";

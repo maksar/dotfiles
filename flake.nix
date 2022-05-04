@@ -41,6 +41,8 @@
 
             nix-direnv = unstable.nix-direnv;
 
+            difftastic = stable.difftastic;
+
             # libjxl = prev.libjxl.overrideAttrs (o: {
             #   doCheck = false;
             # });
