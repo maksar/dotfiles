@@ -26,14 +26,22 @@
       "workbench.editor.enablePreview" = false;
       "workbench.iconTheme" = "vscode-icons-mac";
       "terminal.integrated.fontFamily" = "PragmataPro Liga";
-      "remote.SSH.defaultExtensions" = map (e: "${e.publisher}.${e.name}") (import ./extensions.nix).extensions;
+      "remote.SSH.defaultExtensions" = map (e: "${e.publisher}.${e.name}")
+        (import ./extensions.nix).extensions;
     };
 
-    keybindings = [{
-      key = "shift+cmd+d";
-      command = "editor.action.copyLinesDownAction";
-      when = "editorTextFocus && !editorReadonly";
-    }];
+    keybindings = [
+      {
+        key = "f9";
+        command = "editor.action.showDefinitionPreviewHover";
+        when = "editorTextFocus";
+      }
+      {
+        key = "shift+cmd+d";
+        command = "editor.action.copyLinesDownAction";
+        when = "editorTextFocus && !editorReadonly";
+      }
+    ];
 
     extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace
       (import ./extensions.nix).extensions;

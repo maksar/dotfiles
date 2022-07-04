@@ -11,7 +11,7 @@
     experimental-features = nix-command flakes
   '';
   nix.buildCores = 1;
-  nix.maxJobs = 4;
+  nix.maxJobs = 1;
   # nix.distributedBuilds = true;
   # nix.buildMachines = [{
   #   hostName = "nix-docker";

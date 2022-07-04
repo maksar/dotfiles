@@ -14,6 +14,7 @@
     extraConfig = {
       diff = { colorMoved = "default"; };
       pull = { rebase = "true"; };
+      rebase = { autoStash = "true"; };
     };
     aliases = {
       s = "status";
@@ -26,9 +27,12 @@
     };
     ignores = [ "*~" ".DS_Store" ];
     lfs = { enable = true; };
-    difftastic = {
+    delta = {
       enable = true;
-      background = "dark";
+      options = {
+        line-numbers = true;
+        navigate = true;
+      };
     };
   };
 }

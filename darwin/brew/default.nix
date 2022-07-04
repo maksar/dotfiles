@@ -28,7 +28,7 @@
 
     "nmap" # version in nixos doesn't work with big sur
     # "gamgee"
-    "scw"
+    # "scw"
   ];
 
   homebrew.casks = [
@@ -58,7 +58,6 @@
     "xbar"
 
     # Browsers & network tools
-    "openvpn-connect"
     "firefox"
     "google-chrome"
     "brave-browser"
@@ -78,6 +77,9 @@
     "steam"
     "vlc"
     "spotify"
+    "kindle"
+    "send-to-kindle"
+    "calibre"
 
     "basecamp"
   ];

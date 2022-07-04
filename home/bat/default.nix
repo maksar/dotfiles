@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   home.sessionVariables = {
-    EDITOR = "nvim";
+    EDITOR = "vim";
     BAT_PAGER = config.programs.bat.config.pager;
   };
 

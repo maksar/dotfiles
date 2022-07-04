@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }: {
 
   imports = [
+    ./alacritty
     ./kitty
     ./vscode
     ./zsh

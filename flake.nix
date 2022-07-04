@@ -6,7 +6,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/21.11";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/22.05";
 
     # Environment/system management
     darwin.url = "github:LnL7/nix-darwin";
@@ -23,11 +23,9 @@
 
     prefmanager.url = "github:malob/prefmanager";
     prefmanager.inputs.nixpkgs.follows = "nixpkgs";
-
-    envy = { url = "github:Shados/envy"; flake = false; };
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager, flake-utils, envy, ... }@inputs:
+  outputs = { self, nixpkgs, darwin, home-manager, flake-utils, ... }@inputs:
   let
     # Configuration for `nixpkgs` mostly used in personal configs.
     nixpkgsConfig = with inputs; rec {
@@ -39,31 +37,15 @@
             unstable = import nixpkgs-unstable { inherit (prev) system; inherit config; };
             stable = import nixpkgs-stable { inherit (prev) system; inherit config; };
 
-            nix-direnv = unstable.nix-direnv;
-
-            difftastic = stable.difftastic;
-
-            # libjxl = prev.libjxl.overrideAttrs (o: {
-            #   doCheck = false;
-            # });
-
-            # https://github.com/NixOS/nixpkgs/issues/137678
-            # python39 = prev.python39.override {
-            #   packageOverrides = self: super: {
-            #     beautifulsoup4 = super.beautifulsoup4.overrideAttrs (old: {
-            #       disabledTests = ["test_lxml"];
-            #     });
-            #   };
-            # };
+            # nix-direnv = unstable.nix-direnv;
           }
         )
       ];
     };
 
-    homeManagerCommonConfig = with self.homeManagerModules; {
+    homeManagerCommonConfig = {
       imports = [
         ./home
-        vim-envy
       ];
     };
 
@@ -152,10 +134,6 @@
       users = import ./modules/darwin/users.nix;
       # mysql = import ./modules/darwin/mysql.nix;
       # mongodb = import ./modules/darwin/mongodb.nix;
-    };
-
-    homeManagerModules = {
-      vim-envy = import "${envy}/home-manager.nix" {};
     };
   };
 }
