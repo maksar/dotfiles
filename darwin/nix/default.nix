@@ -10,7 +10,7 @@
     gc-keep-outputs = true
     experimental-features = nix-command flakes
   '';
-  nix.buildCores = 1;
+  nix.buildCores = 6;
   nix.maxJobs = 1;
   # nix.distributedBuilds = true;
   # nix.buildMachines = [{
