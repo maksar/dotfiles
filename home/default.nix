@@ -2,7 +2,6 @@
 
   imports = [
     ./alacritty
-    ./kitty
     ./vscode
     ./zsh
     ./neovim
@@ -38,6 +37,8 @@
     awscli2
     autossh # [TODO] Configure a autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" in ssh config
     mosh
+
+    q-text-as-data
   ];
 
   programs.man.enable = true;
