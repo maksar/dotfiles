@@ -17,16 +17,18 @@
     ctop
     lazydocker
     dive
+    wget
 
     inetutils
     speedtest-cli
     asciinema
-    tree
-    silver-searcher
-    fx
-    envsubst
 
-    ranger
+    tree
+    ncdu
+    mc
+
+    awscli2
+    aws-mfa
 
     nix-tree
     nix-index
@@ -34,10 +36,13 @@
     comma
 
     cachix
-    awscli2
     autossh # [TODO] Configure a autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" in ssh config
     mosh
 
+    envsubst
+
+    silver-searcher
+    fx
     q-text-as-data
   ];
 
