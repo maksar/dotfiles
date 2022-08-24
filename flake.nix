@@ -124,8 +124,8 @@
           homeManagerCommonConfig
           {
             os = "linux";
-            home.username = "alexander.shestakov";
-            home.homeDirectory = "/home/alexander.shestakov";
+            home.username = "maksar";
+            home.homeDirectory = "/home/maksar";
           }
         ];
       };

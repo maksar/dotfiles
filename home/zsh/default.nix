@@ -22,7 +22,9 @@
       src = pkgs.zsh-powerlevel10k;
       file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
     }];
-    shellAliases = { ls = "exa -la --icons"; };
+    shellAliases = {
+      ls = "exa -la --icons";
+    };
 
     oh-my-zsh = {
       enable = true;

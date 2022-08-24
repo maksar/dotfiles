@@ -6,6 +6,7 @@
 
     pkgs.gitAndTools.delta
   ];
+
   programs.git = {
     enable = true;
     userName = "Shestakov Alex";
