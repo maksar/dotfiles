@@ -3,7 +3,7 @@
   home.packages = [ pkgs.nixfmt pkgs.curl pkgs.jq ];
 
   programs.vscode = {
-    enable = true;
+    enable =config.isDarwin;
     userSettings = {
       "editor.renderWhitespace" = "all";
       "files.autoSave" = "onFocusChange";
