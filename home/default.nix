@@ -9,7 +9,7 @@
     ./bat
     ./direnv
     ./os
-    ];
+  ];
 
   home.packages = with pkgs; [
     home-manager
@@ -17,7 +17,9 @@
     ctop
     lazydocker
     dive
+
     wget
+    xdg-utils
 
     inetutils
     speedtest-cli
