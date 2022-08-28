@@ -3,15 +3,22 @@
   services.nix-daemon.enable = true;
   nix.package = pkgs.nixUnstable;
   nix.useDaemon = true;
-  nix.trustedUsers = builtins.attrNames config.users.users;
+  nix.settings = {
+    trusted-users = ["maksar"];
+    cores = 6;
+    max-jobs = 1;
+    substituters = [ "s3://soostone-nix-cache?profile=soostone" ];
+    trusted-public-keys =
+    [ "soostone.com-1:HH1l8F1W1Wt4xW7LBVj3dBlesomw5Qscl66upQkvPMk="
+    ];
+
+  };
   nix.gc.automatic = false;
   nix.extraOptions = ''
     gc-keep-derivations = true
     gc-keep-outputs = true
     experimental-features = nix-command flakes
   '';
-  nix.buildCores = 6;
-  nix.maxJobs = 1;
   # nix.distributedBuilds = true;
   # nix.buildMachines = [{
   #   hostName = "nix-docker";
@@ -31,12 +38,7 @@
   #   maxJobs = 100;
   # }
     # ];
-  users.nix.configureBuildUsers = true;
-
-  nix.binaryCachePublicKeys =
-    [ "soostone.com-1:HH1l8F1W1Wt4xW7LBVj3dBlesomw5Qscl66upQkvPMk="
-    ];
-  nix.binaryCaches = [ "s3://soostone-nix-cache?profile=soostone" ];
+  nix.configureBuildUsers = true;
 
   programs.zsh.enable = true;
 }
