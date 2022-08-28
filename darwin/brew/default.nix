@@ -1,5 +1,5 @@
 {
-  homebrew.enable = true;
+  homebrew.enable = false;
   homebrew.autoUpdate = true;
   homebrew.cleanup = "zap";
   homebrew.global.brewfile = true;
@@ -65,30 +65,28 @@
     "safari-technology-preview"
     "transmission"
     "tunnelbear"
+    "openvpn-connect"
+    "charles"
 
     # Developer tools
     "sourcetree"
-    "charles"
-    "jetbrains-toolbox"
     "typora"
-    "postman"
+    "caffeine"
+    "basecamp"
 
     # Media
     "steam"
     "vlc"
-    "spotify"
     "kindle"
     "send-to-kindle"
     "calibre"
-
-    "basecamp"
+    "yt-music"
   ];
   homebrew.masApps = {
     "XCode" = 497799835;
-    "Amphetamine" = 937984704;
 
     # Microsoft
-    "Excel" = 462058435;
+    # "Excel" = 462058435;
     "Word" = 462054704;
     "PowerPoint" = 462062816;
     "RemoteDesktop" = 1295203466;
