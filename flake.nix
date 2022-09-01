@@ -8,6 +8,9 @@
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
     nixpkgs-stable.url = "github:nixos/nixpkgs/22.05";
 
+    vscode-marketplace.url = "github:AmeerTaweel/nix-vscode-marketplace";
+    vscode-marketplace.inputs.nixpkgs.follows = "nixpkgs";
+
     # Environment/system management
     darwin.url = "github:LnL7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
@@ -28,7 +31,7 @@
     prefmanager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager, flake-utils, ... }@inputs:
+  outputs = { self, nixpkgs, darwin, home-manager, flake-utils, vscode-marketplace, ... }@inputs:
     let
       # Configuration for `nixpkgs` mostly used in personal configs.
       nixpkgsConfig = with inputs; rec {
@@ -47,6 +50,7 @@
               inherit (prev) system;
               inherit config;
             };
+            vscode-packages = vscode-marketplace.packages."${prev.system}";
 
             # nix-direnv = unstable.nix-direnv;
           })

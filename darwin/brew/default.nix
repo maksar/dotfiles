@@ -1,5 +1,5 @@
 {
-  homebrew.enable = false;
+  homebrew.enable = true;
   homebrew.autoUpdate = true;
   homebrew.cleanup = "zap";
   homebrew.global.brewfile = true;
@@ -27,6 +27,7 @@
     # "msodbcsql17"
 
     "nmap" # version in nixos doesn't work with big sur
+    "wireguard-tools"
     # "gamgee"
     # "scw"
   ];
@@ -51,11 +52,12 @@
     # Utilities
     "dropbox"
     "1password"
+    "1password-cli"
     "alfred"
     "unshaky"
     "rectangle"
     "dash"
-    "xbar"
+    "bitbar"
 
     # Browsers & network tools
     "firefox"
@@ -82,19 +84,19 @@
     "calibre"
     "yt-music"
   ];
-  homebrew.masApps = {
-    "XCode" = 497799835;
+  # homebrew.masApps = {
+  #   "XCode" = 497799835;
 
-    # Microsoft
-    # "Excel" = 462058435;
-    "Word" = 462054704;
-    "PowerPoint" = 462062816;
-    "RemoteDesktop" = 1295203466;
+  #   # Microsoft
+  #   # "Excel" = 462058435;
+  #   "Word" = 462054704;
+  #   "PowerPoint" = 462062816;
+  #   "RemoteDesktop" = 1295203466;
 
-    # Apple
-    "Pages" = 409201541;
+  #   # Apple
+  #   "Pages" = 409201541;
 
-    # Other
-    "Harvest" = 506189836;
-  };
+  #   # Other
+  #   "Harvest" = 506189836;
+  # };
 }
