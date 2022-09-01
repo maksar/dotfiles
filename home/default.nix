@@ -40,6 +40,8 @@
     cachix
     autossh # [TODO] Configure a autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" in ssh config
     mosh
+    iperf
+    mtr
 
     envsubst
 
