@@ -23,9 +23,6 @@
       flake = false;
     };
     flake-utils.url = "github:numtide/flake-utils";
-
-    prefmanager.url = "github:malob/prefmanager";
-    prefmanager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, nixpkgs, darwin, home-manager, flake-utils, ... }@inputs:
@@ -131,7 +128,6 @@
           (final: prev: {
             # Some packages
             comma = import comma { inherit (prev) pkgs; };
-            prefmanager = prefmanager.defaultPackage.${prev.system};
           })
         ];
 
