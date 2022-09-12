@@ -909,7 +909,7 @@
   # Context format when in SSH without privileges: user@hostname.
   typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
   # Default context format (no privileges, no SSH): user@hostname.
-  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n@%m'
+  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%m'
 
   # Don't show context unless running with privileges or in SSH.
   # Tip: Remove the next line to always show context.
@@ -918,7 +918,7 @@
   # Custom icon.
   # typeset -g POWERLEVEL9K_CONTEXT_VISUAL_IDENTIFIER_EXPANSION='⭐'
   # Custom prefix.
-  typeset -g POWERLEVEL9K_CONTEXT_PREFIX='with '
+  typeset -g POWERLEVEL9K_CONTEXT_PREFIX='on '
 
   ###[ virtualenv: python virtual environment (https://docs.python.org/3/library/venv.html) ]###
   # Python virtual environment color.

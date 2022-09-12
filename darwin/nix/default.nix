@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
 
   services.nix-daemon.enable = true;
-  nix.package = pkgs.nixUnstable;
+  nix.package = pkgs.nixStable;
   nix.useDaemon = true;
   nix.settings = {
     trusted-users = ["maksar"];

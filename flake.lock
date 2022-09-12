@@ -28,11 +28,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1661882940,
-        "narHash": "sha256-4LaVFnV22WrOA0aolqqk9dXrM8crikcrLQt29G18F7M=",
+        "lastModified": 1662478528,
+        "narHash": "sha256-Myjd0HPL5lXri3NXOcJ6gP7IKod2eMweQBKM4uxgEGw=",
         "owner": "LnL7",
         "repo": "nix-darwin",
-        "rev": "80cec5115aae74accc4ccfb9f84306d7863f0632",
+        "rev": "3b69bf3cc26ae19de847bfe54d6ab22d7381a90a",
         "type": "github"
       },
       "original": {
@@ -128,21 +128,6 @@
         "type": "github"
       }
     },
-    "flake-utils_3": {
-      "locked": {
-        "lastModified": 1659877975,
-        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -151,11 +136,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1661824092,
-        "narHash": "sha256-nSWLWytlXbeLrx5A+r5Pso7CvVrX5EgmIIXW/EXvPHQ=",
+        "lastModified": 1662472236,
+        "narHash": "sha256-epA5KzVUxw9ZV+st2aU4oFfJGyIcYleTpX28wsCQQP4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "5bd66dc6cd967033489c69d486402b75d338eeb6",
+        "rev": "de94878b6b83f7f2cfda9cdff005417a6d7ac82c",
         "type": "github"
       },
       "original": {
@@ -281,8 +266,7 @@
         "nixpkgs-master": "nixpkgs-master",
         "nixpkgs-stable": "nixpkgs-stable",
         "nixpkgs-unstable": "nixpkgs-unstable",
-        "prefmanager": "prefmanager",
-        "vscode-marketplace": "vscode-marketplace"
+        "prefmanager": "prefmanager"
       }
     },
     "utils": {
@@ -297,27 +281,6 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
-        "type": "github"
-      }
-    },
-    "vscode-marketplace": {
-      "inputs": {
-        "flake-utils": "flake-utils_3",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1662019250,
-        "narHash": "sha256-7fLV45jqj0v+q3dUM+iRWv9rJzqKcRimah8MaBe621Q=",
-        "owner": "AmeerTaweel",
-        "repo": "nix-vscode-marketplace",
-        "rev": "6d660610d15ad26be92f1c09725ed67f8d9bf105",
-        "type": "github"
-      },
-      "original": {
-        "owner": "AmeerTaweel",
-        "repo": "nix-vscode-marketplace",
         "type": "github"
       }
     }

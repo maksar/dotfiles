@@ -1,5 +1,4 @@
 {
-  "nixEnvSelector.suggestion": false,
   "peacock.color": "grey",
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#999999",
@@ -18,6 +17,7 @@
     "titleBar.activeBackground": "#808080",
     "titleBar.activeForeground": "#15202b",
     "titleBar.inactiveBackground": "#80808099",
-    "titleBar.inactiveForeground": "#15202b99"
-  }
+    "titleBar.inactiveForeground": "#15202b99",
+    "commandCenter.border": "#15202b99"
+  },
 }

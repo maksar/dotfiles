@@ -12,7 +12,7 @@
   ];
 
   home.packages = with pkgs; [
-    nixUnstable
+    nixStable
 
     home-manager
 
@@ -36,6 +36,7 @@
 
     nix-tree
     nix-index
+    nix-top
 
     comma
 
@@ -44,6 +45,7 @@
     mosh
     iperf
     mtr
+    nmap
 
     envsubst
 

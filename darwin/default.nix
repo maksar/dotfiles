@@ -6,9 +6,5 @@
     ./brew
     ./fonts
     ./macos
-    ./postgresql
-    # ./redis
-    # ./mysql
-    # ./mongodb
   ];
 }

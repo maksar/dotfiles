@@ -1,5 +1,48 @@
-{ config, pkgs, ... }: {
+{ config, system, pkgs, lib, ... }:
 
+  let
+  extensions = [
+    "2gua.rainbow-brackets"
+    "4ops.terraform"
+    "akamud.vscode-theme-onedark"
+    "bbenoist.nix"
+    "bibhasdn.unique-lines"
+    "brettm12345.nixfmt-vscode"
+    "bung87.rails"
+    "bung87.vscode-gemfile"
+    "dbankier.vscode-quick-select"
+    "deerawan.vscode-dash"
+    "donjayamanne.githistory"
+    "eamodio.gitlens"
+    "ginfuru.ginfuru-vscode-jekyll-syntax"
+    "ginfuru.vscode-jekyll-snippets"
+    "hashicorp.terraform"
+    "haskell.haskell"
+    "hoovercj.haskell-linter"
+    "jameswain.gitlab-pipelines"
+    "johnpapa.vscode-peacock"
+    "justusadam.language-haskell"
+    "mechatroner.rainbow-csv"
+    "mhutchie.git-graph"
+    "mkhl.direnv"
+    "mogeko.haskell-extension-pack"
+    "ms-vscode-remote.vscode-remote-extensionpack"
+    "mutantdino.resourcemonitor"
+    "oderwat.indent-rainbow"
+    "rebornix.ruby"
+    "shinichi-takii.sql-bigquery"
+    "sianglim.slim"
+    "streetsidesoftware.code-spell-checker"
+    "syler.sass-indented"
+    "tomoki1207.pdf"
+    "usernamehw.errorlens"
+    "vigoo.stylish-haskell"
+    "wayou.vscode-icons-mac"
+    "will-wow.vscode-alternate-file"
+    "wingrunr21.vscode-ruby"
+  ];
+  in
+{
   home.packages = [ pkgs.nixfmt pkgs.curl pkgs.jq ];
 
   programs.vscode = {
@@ -16,7 +59,7 @@
       "breadcrumbs.enabled" = true;
       "editor.useTabStops" = false;
       "editor.fontFamily" = "PragmataPro Liga";
-      "editor.fontSize" = 16;
+      "editor.fontSize" = 18;
       "editor.fontLigatures" = true;
       "editor.lineHeight" = 20;
       "workbench.fontAliasing" = "antialiased";
@@ -26,8 +69,10 @@
       "workbench.editor.enablePreview" = false;
       "workbench.iconTheme" = "vscode-icons-mac";
       "terminal.integrated.fontFamily" = "PragmataPro Liga";
-      "remote.SSH.defaultExtensions" = map (e: "${e.publisher}.${e.name}")
-        (import ./extensions.nix).extensions;
+      "terminal.integrated.fontSize" = 18;
+      "terminal.integrated.tabs.enabled" = false;
+      "remote.SSH.defaultExtensions" = extensions;
+      "editor.lineNumbers"= "relative";
     };
 
     keybindings = [
@@ -42,8 +87,9 @@
         when = "editorTextFocus && !editorReadonly";
       }
     ];
-
-    extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace
-      (import ./extensions.nix).extensions;
   };
+
+  home.activation.installExtensions =
+      lib.hm.dag.entryAfter [ "writeBoundary" ]
+        (builtins.concatStringsSep "\n" (map (e: "${config.programs.vscode.package}/bin/code --install-extension ${e} --force") extensions));
 }
