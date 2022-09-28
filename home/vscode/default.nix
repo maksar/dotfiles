@@ -32,6 +32,7 @@
     "rebornix.ruby"
     "shinichi-takii.sql-bigquery"
     "sianglim.slim"
+    "slhsxcmy.vscode-double-line-numbers"
     "streetsidesoftware.code-spell-checker"
     "syler.sass-indented"
     "tomoki1207.pdf"
@@ -72,7 +73,12 @@
       "terminal.integrated.fontSize" = 18;
       "terminal.integrated.tabs.enabled" = false;
       "remote.SSH.defaultExtensions" = extensions;
-      "editor.lineNumbers"= "relative";
+      "editor.lineNumbers" = "relative";
+      "vscode-double-line-numbers.font.family" = "PragmataPro Liga";
+      "vscode-double-line-numbers.font.weight" = "normal";
+      "vscode-double-line-numbers.font.color" = "#646C82";
+      "vscode-double-line-numbers.text.height" = "90";
+      "vscode-double-line-numbers.text.width" = "110";
     };
 
     keybindings = [

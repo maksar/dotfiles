@@ -53,7 +53,6 @@
       # Modules shared by most `nix-darwin` personal configurations.
       nixDarwinCommonModules = [
         # Include extra `nix-darwin`
-        self.darwinModules.security.pam
         self.darwinModules.users
 
         # Main `nix-darwin` config
@@ -133,7 +132,6 @@
 
       # My `nix-darwin` modules that are pending upstream, or patched versions waiting on upstream fixes.
       darwinModules = {
-        security.pam = import ./modules/darwin/pam.nix;
         users = import ./modules/darwin/users.nix;
       };
     };
