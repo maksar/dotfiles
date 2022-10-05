@@ -55,9 +55,8 @@ a@{ config, pkgs, darwinConfig, ... }:
         });
 
         rigel = pkgs.vimUtils.buildVimPluginFrom2Nix {
-        # rigel = pkgs.vimUtils.buildVimPlugin {
-          name = "rigel";
-          # version = "2020-08-25";
+          pname = "rigel";
+          version = "2020-08-25";
           src = pkgs.fetchFromGitHub {
             owner = "Rigellute";
             repo = "rigel";
@@ -105,7 +104,7 @@ a@{ config, pkgs, darwinConfig, ... }:
             let g:XkbSwitchEnabled = 1
           '';
         }
-        { 
+        {
           plugin = toggleterm-nvim;
           config = ''
             require("toggleterm").setup{
