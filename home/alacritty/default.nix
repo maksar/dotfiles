@@ -57,7 +57,7 @@
       ];
 
       font = {
-        use_thin_strokes = true;
+        # use_thin_strokes = true;
         size = 18;
         normal = {
           family = "PragmataPro Liga";

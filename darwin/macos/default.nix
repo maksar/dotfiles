@@ -8,5 +8,6 @@
   system.activationScripts.keyboardLayout.text = ''
     defaults write com.apple.HIToolbox AppleEnabledInputSources -array "<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>19458</integer><key>KeyboardLayout Name</key><string>RussianWin</string></dict>"
     defaults write com.apple.HIToolbox AppleGlobalTextInputProperties -dict TextInputGlobalPropertyPerContextInput -int 1
+    defaults write -g AppleFontSmoothing -int 0
   '';
 }
