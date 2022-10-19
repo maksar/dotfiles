@@ -11,6 +11,10 @@
     ./os
   ];
 
+  manual.html.enable = false;
+  manual.json.enable = false;
+  manual.manpages.enable = false;
+
   home.packages = with pkgs; [
     nixStable
 

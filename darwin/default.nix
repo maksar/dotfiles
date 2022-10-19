@@ -7,4 +7,6 @@
     ./fonts
     ./macos
   ];
+
+  documentation.enable = false;
 }
