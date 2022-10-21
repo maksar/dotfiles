@@ -16,6 +16,7 @@
       diff = { colorMoved = "default"; };
       pull = { rebase = "true"; };
       rebase = { autoStash = "true"; };
+      push = { autoSetupRemote = "true"; };
     };
     aliases = {
       s = "status";
