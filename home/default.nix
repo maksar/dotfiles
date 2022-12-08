@@ -31,8 +31,12 @@
     speedtest-cli
     asciinema
 
+    fd
+    entr
     tree
+    broot
     ncdu
+    dua
     mc
 
     awscli2
