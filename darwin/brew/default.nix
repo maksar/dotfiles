@@ -32,7 +32,7 @@
     # Utilities
     "dropbox"
     "1password"
-    "1password-cli"
+    "1password-cli-beta"
     "alfred"
     "unshaky"
     "rectangle"
