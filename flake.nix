@@ -68,6 +68,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.users.${primaryUser} = homeManagerCommonConfig // {
               os = "darwin";
+              dropboxEnabled = true;
             };
           })
       ];
@@ -90,6 +91,7 @@
             ({ lib, ... }: {
               users.primaryUser = "runner";
               homebrew.enable = lib.mkForce false;
+              dropboxEnabled = false;
             })
           ];
         };

@@ -6,7 +6,8 @@ in
     os = lib.mkOption { type = lib.types.str; };
     isDarwin = lib.mkOption { type = lib.types.bool; };
     isLinux = lib.mkOption { type = lib.types.bool; };
-    dropboxLocation = lib.mkOption { type = lib.types.string; };
+    dropboxLocation = lib.mkOption { type = lib.types.str; };
+    dropboxEnabled = lib.mkOption { type = lib.types.bool; };
   };
 
   config = {

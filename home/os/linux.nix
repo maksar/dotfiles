@@ -1,3 +1,5 @@
 {
-  home = {};
+  home = {
+    dropboxEnabled = false;
+  };
 }
