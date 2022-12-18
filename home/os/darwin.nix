@@ -11,4 +11,6 @@
       "^$\UF72B" = moveToEndOfDocumentAndModifySelection:; // ctrl-shift-end
     }
   '';
+
+  dropboxRelativeLocation = "Library/CloudStorage/Dropbox";
 }
