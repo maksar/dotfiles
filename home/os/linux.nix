@@ -1,5 +1,3 @@
 {
-  home = {
-    dropboxEnabled = false;
-  };
+  home = {};
 }

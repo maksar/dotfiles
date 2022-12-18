@@ -120,6 +120,7 @@
             os = "linux";
             home.username = "maksar";
             home.homeDirectory = "/home/maksar";
+            dropboxEnabled = false;
           }
         ];
       };
