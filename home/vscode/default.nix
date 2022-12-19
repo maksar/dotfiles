@@ -32,7 +32,6 @@
     "rebornix.ruby"
     "shinichi-takii.sql-bigquery"
     "sianglim.slim"
-    "slhsxcmy.vscode-double-line-numbers"
     "streetsidesoftware.code-spell-checker"
     "syler.sass-indented"
     "tomoki1207.pdf"
