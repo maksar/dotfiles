@@ -24,7 +24,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Install Nix
-      uses: cachix/install-nix-action@v16
+      uses: cachix/install-nix-action@v18
       with:
         extra_nix_config: |
           access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
@@ -42,7 +42,6 @@ jobs:
 
     - name: Build and switch to nix-darwin env
       run: |
-        sudo rm -rf /etc/nix/nix.conf
         # Create /run directory
         echo -e "run\tprivate/var/run" | sudo tee -a /etc/synthetic.conf >/dev/null
         /System/Library/Filesystems/apfs.fs/Contents/Resources/apfs.util -t 2>/dev/null || true
