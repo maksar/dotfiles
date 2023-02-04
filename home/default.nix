@@ -35,7 +35,7 @@
     entr
     tree
     broot
-    ncdu
+    # ncdu
     dua
     mc
 
