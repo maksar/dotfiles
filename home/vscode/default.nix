@@ -78,6 +78,7 @@
       "vscode-double-line-numbers.font.color" = "#646C82";
       "vscode-double-line-numbers.text.height" = "90";
       "vscode-double-line-numbers.text.width" = "110";
+      "resmon.disk.format" = "UsedOutOfTotal";
     };
 
     keybindings = [
