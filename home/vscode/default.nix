@@ -72,13 +72,10 @@
       "terminal.integrated.fontSize" = 18;
       "terminal.integrated.tabs.enabled" = false;
       "remote.SSH.defaultExtensions" = extensions;
-      "editor.lineNumbers" = "relative";
-      "vscode-double-line-numbers.font.family" = "PragmataPro Liga";
-      "vscode-double-line-numbers.font.weight" = "normal";
-      "vscode-double-line-numbers.font.color" = "#646C82";
-      "vscode-double-line-numbers.text.height" = "90";
-      "vscode-double-line-numbers.text.width" = "110";
-      "resmon.disk.format" = "UsedOutOfTotal";
+      "editor.lineNumbers" = "on";
+      "resmon.show.disk" = true;
+      "resmon.disk.format" = "PercentUsed";
+      "resmon.disk.drives" = ["/dev/root"];
     };
 
     keybindings = [
