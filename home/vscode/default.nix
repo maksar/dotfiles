@@ -89,6 +89,16 @@
         command = "editor.action.copyLinesDownAction";
         when = "editorTextFocus && !editorReadonly";
       }
+      {
+        key = "shift+cmd+]";
+        command = "workbench.action.terminal.focusNextPane";
+        when = "terminalFocus";
+      }
+      {
+        key = "shift+cmd+[";
+        command = "workbench.action.terminal.focusPreviousPane";
+        when = "terminalFocus";
+      }
     ];
   };
 
