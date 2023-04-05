@@ -76,6 +76,10 @@
       "resmon.show.disk" = true;
       "resmon.disk.format" = "PercentUsed";
       "resmon.disk.drives" = ["/dev/root"];
+
+      "gptcommit.gptcommitPath" = "/home/maksar/.cargo/bin/gptcommit";
+      "gptcommit.expressModeContent" = "title";
+
     };
 
     keybindings = [
