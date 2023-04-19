@@ -5,6 +5,7 @@
     "2gua.rainbow-brackets"
     "4ops.terraform"
     "akamud.vscode-theme-onedark"
+    "amazonwebservices.aws-toolkit-vscode"
     "bbenoist.nix"
     "bibhasdn.unique-lines"
     "brettm12345.nixfmt-vscode"
