@@ -6,7 +6,7 @@
     "4ops.terraform"
     "akamud.vscode-theme-onedark"
     "amazonwebservices.aws-toolkit-vscode"
-    "bbenoist.nix"
+    "jnoortheen.nix-ide"
     "bibhasdn.unique-lines"
     "brettm12345.nixfmt-vscode"
     "bung87.rails"
@@ -41,6 +41,7 @@
     "wayou.vscode-icons-mac"
     "will-wow.vscode-alternate-file"
     "wingrunr21.vscode-ruby"
+    "janw4ld.lambda-black"
   ];
   in
 {
@@ -66,7 +67,7 @@
       "workbench.fontAliasing" = "antialiased";
       "files.trimTrailingWhitespace" = true;
       "editor.minimap.enabled" = false;
-      "workbench.colorTheme" = "Atom One Dark";
+      "workbench.colorTheme" = "Lambda Dark+";
       "workbench.editor.enablePreview" = false;
       "workbench.iconTheme" = "vscode-icons-mac";
       "terminal.integrated.fontFamily" = "PragmataPro Liga";

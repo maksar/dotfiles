@@ -6,7 +6,7 @@
     enable = true;
     enableAutosuggestions = true;
     enableCompletion = true;
-    enableSyntaxHighlighting = true;
+    syntaxHighlighting.enable = true;
     envExtra = ''
       PATH=./bin/:$PATH
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
