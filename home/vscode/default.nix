@@ -38,46 +38,50 @@
     "tomoki1207.pdf"
     "usernamehw.errorlens"
     "vigoo.stylish-haskell"
-    "wayou.vscode-icons-mac"
+    "tal7aouy.icons"
     "will-wow.vscode-alternate-file"
     "wingrunr21.vscode-ruby"
     "janw4ld.lambda-black"
+    "ilyakooo0.ormolu"
   ];
   in
 {
-  home.packages = [ pkgs.nixfmt pkgs.curl pkgs.jq ];
+  home.packages = with pkgs; [ nixfmt curl jq nil ];
 
   programs.vscode = {
     enable = config.isDarwin;
     userSettings = {
-      "editor.renderWhitespace" = "all";
-      "files.autoSave" = "onFocusChange";
-      "editor.rulers" = [ 80 120 ];
-      "telemetry.enableTelemetry" = false;
-      "telemetry.enableCrashReporter" = false;
-      "editor.tabSize" = 2;
-      "files.exclude" = { "**/node_modules/**" = true; };
-      "editor.formatOnSave" = false;
       "breadcrumbs.enabled" = true;
-      "editor.useTabStops" = false;
       "editor.fontFamily" = "PragmataPro Liga";
-      "editor.fontSize" = 18;
       "editor.fontLigatures" = true;
-      "editor.lineHeight" = 20;
-      "workbench.fontAliasing" = "antialiased";
-      "files.trimTrailingWhitespace" = true;
+      "editor.fontSize" = 16.5;
+      "editor.formatOnSave" = false;
+      "editor.lineHeight" = 18;
+      "editor.lineNumbers" = "on";
       "editor.minimap.enabled" = false;
+      "editor.renderWhitespace" = "all";
+      "editor.rulers" = [ 80 120 ];
+      "editor.tabSize" = 2;
+      "editor.useTabStops" = false;
+      "files.autoSave" = "onFocusChange";
+      "files.exclude" = { "**/node_modules/**" = true; };
+      "files.trimTrailingWhitespace" = true;
+      "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "nil";
+      "remote.SSH.defaultExtensions" = extensions;
+      "resmon.disk.drives" = ["/dev/root"];
+      "resmon.disk.format" = "PercentUsed";
+      "resmon.show.disk" = true;
+      "telemetry.enableCrashReporter" = false;
+      "telemetry.enableTelemetry" = false;
+      "terminal.integrated.fontFamily" = "PragmataPro Liga";
+      "terminal.integrated.fontSize" = 16.5;
+      "terminal.integrated.tabs.enabled" = false;
+      "window.zoomLevel" = 1;
       "workbench.colorTheme" = "Lambda Dark+";
       "workbench.editor.enablePreview" = false;
-      "workbench.iconTheme" = "vscode-icons-mac";
-      "terminal.integrated.fontFamily" = "PragmataPro Liga";
-      "terminal.integrated.fontSize" = 18;
-      "terminal.integrated.tabs.enabled" = false;
-      "remote.SSH.defaultExtensions" = extensions;
-      "editor.lineNumbers" = "on";
-      "resmon.show.disk" = true;
-      "resmon.disk.format" = "PercentUsed";
-      "resmon.disk.drives" = ["/dev/root"];
+      "workbench.fontAliasing" = "antialiased";
+      "workbench.iconTheme" = "icons";
       "yaml.customTags" = ["!reference sequence"];
     };
 
