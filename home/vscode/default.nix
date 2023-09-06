@@ -43,6 +43,7 @@
     "wingrunr21.vscode-ruby"
     "janw4ld.lambda-black"
     "ilyakooo0.ormolu"
+    "fabiospampinato.vscode-commands"
   ];
   in
 {
@@ -83,6 +84,21 @@
       "workbench.fontAliasing" = "antialiased";
       "workbench.iconTheme" = "icons";
       "yaml.customTags" = ["!reference sequence"];
+
+      "commands.commands" = {
+        "setAndFormatJson" = {
+          "sequence" = [
+            {
+              "command" = "commands.setEditorLanguage";
+              "args" = "json";
+            }
+            {
+              "command" = "editor.action.formatDocument";
+            }
+          ];
+
+        };
+      };
     };
 
     keybindings = [
@@ -103,6 +119,11 @@
       }
       {
         key = "shift+cmd+[";
+        command = "workbench.action.terminal.focusPreviousPane";
+        when = "terminalFocus";
+      }
+      {
+        key = "shift+cmd+i";
         command = "workbench.action.terminal.focusPreviousPane";
         when = "terminalFocus";
       }
