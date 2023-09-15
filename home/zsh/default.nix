@@ -1,6 +1,6 @@
 { config, pkgs, home, ... }: {
 
-  home.packages = [ pkgs.exa pkgs.zsh-powerlevel10k ];
+  home.packages = [ pkgs.eza pkgs.zsh-powerlevel10k ];
 
   programs.zsh = {
     enable = true;
@@ -23,7 +23,7 @@
       file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
     }];
     shellAliases = {
-      ls = "exa -la --icons";
+      ls = "eza -la --icons";
     };
 
     oh-my-zsh = {
