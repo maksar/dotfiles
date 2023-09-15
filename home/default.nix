@@ -40,6 +40,7 @@
     mc
 
     awscli2
+    ssm-session-manager-plugin
     aws-mfa
 
     nix-tree
