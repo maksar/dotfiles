@@ -12,6 +12,11 @@
     "homebrew/cask-drivers"
   ];
 
+  homebrew.brews = [
+    # Browsers & network tools
+    "wireguard-tools"
+  ];
+
   homebrew.casks = [
     # Drivers
     "logitech-options"
