@@ -16,7 +16,7 @@
   manual.manpages.enable = false;
 
   home.packages = with pkgs; [
-    nixStable
+    nixUnstable
 
     home-manager
 
