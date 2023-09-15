@@ -6,7 +6,6 @@
     "4ops.terraform"
     "akamud.vscode-theme-onedark"
     "amazonwebservices.aws-toolkit-vscode"
-    "jnoortheen.nix-ide"
     "bibhasdn.unique-lines"
     "brettm12345.nixfmt-vscode"
     "bung87.rails"
@@ -15,14 +14,19 @@
     "deerawan.vscode-dash"
     "donjayamanne.githistory"
     "eamodio.gitlens"
+    "fabiospampinato.vscode-commands"
     "ginfuru.ginfuru-vscode-jekyll-syntax"
     "ginfuru.vscode-jekyll-snippets"
     "hashicorp.terraform"
     "haskell.haskell"
     "hoovercj.haskell-linter"
+    "ilyakooo0.ormolu"
     "jameswain.gitlab-pipelines"
+    "janw4ld.lambda-black"
+    "jnoortheen.nix-ide"
     "johnpapa.vscode-peacock"
     "justusadam.language-haskell"
+    "luggage66.AWK"
     "mechatroner.rainbow-csv"
     "mhutchie.git-graph"
     "mkhl.direnv"
@@ -35,15 +39,12 @@
     "sianglim.slim"
     "streetsidesoftware.code-spell-checker"
     "syler.sass-indented"
+    "tal7aouy.icons"
     "tomoki1207.pdf"
     "usernamehw.errorlens"
     "vigoo.stylish-haskell"
-    "tal7aouy.icons"
     "will-wow.vscode-alternate-file"
     "wingrunr21.vscode-ruby"
-    "janw4ld.lambda-black"
-    "ilyakooo0.ormolu"
-    "fabiospampinato.vscode-commands"
   ];
   in
 {
@@ -124,8 +125,10 @@
       }
       {
         key = "shift+cmd+i";
-        command = "workbench.action.terminal.focusPreviousPane";
-        when = "terminalFocus";
+        command = "runCommands";
+        args = {
+          commands = ["setAndFormatJson"];
+        };
       }
     ];
   };
