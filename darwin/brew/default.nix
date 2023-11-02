@@ -19,8 +19,8 @@
 
   homebrew.casks = [
     # Drivers
-    "logitech-options"
-    "intel-power-gadget"
+    # "logitech-options"
+    # "intel-power-gadget"
     "menumeters"
 
     # Communication
@@ -31,42 +31,43 @@
     "zoom"
     "microsoft-teams"
     "basecamp"
-    "mimestream"
+    # "mimestream"
     "whatsapp"
+    "signal"
 
     # Utilities
     "dropbox"
     "1password"
     "1password-cli-beta"
     "alfred"
-    "unshaky"
+    # "unshaky"
     "rectangle"
     "dash"
     "bitbar"
 
     # Browsers & network tools
-    "firefox"
+    # "firefox"
     "google-chrome"
-    "brave-browser"
-    "vivaldi"
-    "safari-technology-preview"
+    # "brave-browser"
+    # "vivaldi"
+    # "safari-technology-preview"
     "transmission"
     "tunnelbear"
     "openvpn-connect"
-    "charles"
+    # "charles"
 
     # Developer tools
-    "sourcetree"
-    "typora"
+    # "sourcetree"
+    # "typora"
     "caffeine"
-    "basecamp"
+    # "basecamp"
 
     # Media
     "steam"
     "vlc"
-    "kindle"
-    "send-to-kindle"
+    # "kindle"
+    # "send-to-kindle"
     "calibre"
-    "yt-music"
+    # "yt-music"
   ];
 }
