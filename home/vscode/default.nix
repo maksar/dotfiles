@@ -79,6 +79,7 @@
       "terminal.integrated.fontFamily" = "PragmataPro Liga";
       "terminal.integrated.fontSize" = 16.5;
       "terminal.integrated.tabs.enabled" = false;
+      "terminal.integrated.scrollback" = 10000;
       "window.zoomLevel" = 1;
       "workbench.colorTheme" = "Lambda Dark+";
       "workbench.editor.enablePreview" = false;
