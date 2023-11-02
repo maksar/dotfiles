@@ -48,7 +48,7 @@
   ];
   in
 {
-  home.packages = with pkgs; [ nixfmt curl jq nil ];
+  home.packages = with pkgs; [ nixfmt curl jq jqp nil ];
 
   programs.vscode = {
     enable = config.isDarwin;
