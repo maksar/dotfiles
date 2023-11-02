@@ -54,7 +54,7 @@ a@{ config, pkgs, darwinConfig, ... }:
           buildInputs = [ issw ];
         });
 
-        rigel = pkgs.vimUtils.buildVimPluginFrom2Nix {
+        rigel = pkgs.vimUtils.buildVimPlugin {
           pname = "rigel";
           version = "2020-08-25";
           src = pkgs.fetchFromGitHub {
