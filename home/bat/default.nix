@@ -9,6 +9,7 @@
     config = {
       theme = "TwoDark";
       pager = "less -R";
+      style = "header,grid";
     };
   };
 }

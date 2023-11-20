@@ -65,7 +65,10 @@
   programs.autojump.enable = true;
   programs.jq.enable = true;
   programs.dircolors.enable = true;
-  programs.fzf.enable = true;
+  programs.fzf = {
+    enable = true;
+    fileWidgetOptions = ["--preview 'bat --color=always --style=header,grid --line-range :500 {}'"];
+  };
   programs.htop = {
     enable = true;
     settings.show_program_path = true;

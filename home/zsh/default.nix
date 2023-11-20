@@ -2,6 +2,16 @@
 
   home.packages = [ pkgs.eza pkgs.zsh-powerlevel10k ];
 
+  programs.atuin = {
+    enable = true;
+    flags = ["--disable-up-arrow"];
+    settings = {
+      ctrl_n_shortcuts = true;
+      # enter_accept = true;
+      style = "compact";
+      show_help = false;
+    };
+  };
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
