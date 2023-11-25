@@ -21,7 +21,7 @@
     # Drivers
     # "logitech-options"
     # "intel-power-gadget"
-    "menumeters"
+    # "menumeters"
 
     # Communication
     "skype"
@@ -44,6 +44,7 @@
     "rectangle"
     "dash"
     "bitbar"
+    "appzapper"
 
     # Browsers & network tools
     # "firefox"
