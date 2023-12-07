@@ -23,8 +23,7 @@
     signing = {
       key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBkr9IPge4Egv4R0+74zynReNDtelevINHdxIw11s5ZW";
       signByDefault = true;
-      gpgPath = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
-    };
+    } // (if config.isLinux then {} else { gpgPath ="/Applications/1Password.app/Contents/MacOS/op-ssh-sign"; });
     aliases = {
       s = "status";
       co = "checkout";
