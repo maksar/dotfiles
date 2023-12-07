@@ -51,7 +51,7 @@ in
     };
     includes = [
       {
-        condition = "gitdir:${config.home.homeDirectory}/projects/soostone/napkin/";
+        condition = "gitdir:${config.home.homeDirectory}/projects/soostone/";
         path = "${config.home.homeDirectory}/.config/${soostone_config_path}";
       }
     ];
