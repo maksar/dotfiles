@@ -2,9 +2,14 @@
 
 let
   allowed_signers_path = "git/allowed_signers";
-  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBkr9IPge4Egv4R0+74zynReNDtelevINHdxIw11s5ZW";
+  soostone_config_path = "git/soostone";
+  name = "Shestakov Alex";
+  main_email = "Maksar.mail@gmail.com";
+  main_public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBkr9IPge4Egv4R0+74zynReNDtelevINHdxIw11s5ZW";
+  soostone_public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJI8lcAEK45B7MmJcCDPBv1x0Q1Kvezbxxz7SSDHhaav";
+  soostone_email = "alexander.shestakov@soostone.com";
 in
-rec {
+{
   home.packages = [
     pkgs.tig
     pkgs.lazygit
@@ -16,14 +21,26 @@ rec {
 
   xdg.configFile = {
     ${allowed_signers_path} = {
-      text = "${programs.git.userEmail} ${public_key}";
+      text = ''
+        ${main_email} ${main_public_key}
+        ${soostone_email} ${soostone_public_key}
+      '';
+    };
+
+    ${soostone_config_path} = {
+      text = ''
+        [user]
+          name = "${name}"
+          email = "${soostone_email}"
+          signingkey = "${soostone_public_key}"
+      '';
     };
   };
 
   programs.git = {
     enable = true;
-    userName = "Shestakov Alex";
-    userEmail = "Maksar.mail@gmail.com";
+    userName = name;
+    userEmail = main_email;
     package = pkgs.gitFull;
     extraConfig = {
       diff = { colorMoved = "default"; };
@@ -32,8 +49,14 @@ rec {
       push = { autoSetupRemote = "true"; };
       gpg = { format = "ssh"; ssh = { allowedSignersFile = "${config.home.homeDirectory}/.config/${allowed_signers_path}"; }; };
     };
+    includes = [
+      {
+        condition = "gitdir:${config.home.homeDirectory}/projects/soostone/napkin/";
+        path = "${config.home.homeDirectory}/.config/${soostone_config_path}";
+      }
+    ];
     signing = {
-      key = public_key;
+      key = main_public_key;
       signByDefault = true;
     } // (if config.isLinux then {} else { gpgPath ="/Applications/1Password.app/Contents/MacOS/op-ssh-sign"; });
     aliases = {
