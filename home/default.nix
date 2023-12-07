@@ -76,8 +76,7 @@
 
   home.sessionVariables = {
     MANPAGER = "${pkgs.most}/bin/most";
-    SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock";
-  };
+  } // (if config.isLinux then {} else { SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock"; });
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
