@@ -6,7 +6,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/22.11";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/23.11";
 
     # Environment/system management
     darwin.url = "github:LnL7/nix-darwin";
