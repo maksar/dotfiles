@@ -37,6 +37,7 @@
     broot
     # ncdu
     dua
+    duf
     mc
 
     awscli2
