@@ -7,7 +7,7 @@
   homebrew.onActivation.upgrade = true;
 
   homebrew.taps = [
-    "homebrew/cask"
+    # "homebrew/cask"
     "homebrew/cask-versions"
     "homebrew/cask-drivers"
   ];
