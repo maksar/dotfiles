@@ -7,7 +7,6 @@
   homebrew.onActivation.upgrade = true;
 
   homebrew.taps = [
-    # "homebrew/cask"
     "homebrew/cask-versions"
     "homebrew/cask-drivers"
   ];
@@ -53,8 +52,9 @@
     # "vivaldi"
     # "safari-technology-preview"
     "transmission"
-    "tunnelbear"
-    "openvpn-connect"
+    # "tunnelbear"
+    # "openvpn-connect"
+    "tailscale"
     # "charles"
 
     # Developer tools
