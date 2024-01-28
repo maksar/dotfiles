@@ -13,7 +13,7 @@
 
   homebrew.brews = [
     # Browsers & network tools
-    "wireguard-tools"
+    # "wireguard-tools"
   ];
 
   homebrew.casks = [
