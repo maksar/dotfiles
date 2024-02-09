@@ -4,7 +4,7 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      custom_cursor_colors = true;
+      # custom_cursor_colors = true;
       colors = {
         cursor = { cursor = "0xAA0000"; };
         primary = {
@@ -48,13 +48,15 @@
           y = 5;
         };
       };
-      key_bindings = [
-        {
-          key = "N";
-          mods = "Command";
-          action = "CreateNewWindow";
-        }
-      ];
+      keyboard = {
+        bindings = [
+          {
+            key = "N";
+            mods = "Command";
+            action = "CreateNewWindow";
+          }
+        ];
+      };
 
       font = {
         size = 19;

@@ -7,9 +7,11 @@
     trusted-users = ["maksar"];
     cores = 6;
     max-jobs = 1;
-    substituters = [ "s3://soostone-nix-cache?profile=soostone" ];
+    substituters = [ "https://nix-cache.cicd.soostonelabs.com/" ];
+
     trusted-public-keys =
-    [ "soostone.com-1:HH1l8F1W1Wt4xW7LBVj3dBlesomw5Qscl66upQkvPMk="
+    [
+      "soostone.com-1:HH1l8F1W1Wt4xW7LBVj3dBlesomw5Qscl66upQkvPMk="
     ];
 
   };
