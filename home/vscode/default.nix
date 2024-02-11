@@ -10,6 +10,7 @@
     "brettm12345.nixfmt-vscode"
     "bung87.rails"
     "bung87.vscode-gemfile"
+    "cweijan.dbclient-jdbc"
     "dbankier.vscode-quick-select"
     "deerawan.vscode-dash"
     "donjayamanne.githistory"
@@ -17,9 +18,11 @@
     "fabiospampinato.vscode-commands"
     "ginfuru.ginfuru-vscode-jekyll-syntax"
     "ginfuru.vscode-jekyll-snippets"
+    "GitHub.copilot"
     "hashicorp.terraform"
     "haskell.haskell"
     "hoovercj.haskell-linter"
+    "iliazeus.vscode-ansi"
     "ilyakooo0.ormolu"
     "jameswain.gitlab-pipelines"
     "janw4ld.lambda-black"
@@ -86,6 +89,12 @@
       "workbench.fontAliasing" = "antialiased";
       "workbench.iconTheme" = "icons";
       "yaml.customTags" = ["!reference sequence"];
+      "window.commandCenter"= false;
+
+      "editor.stickyScroll.enabled" =  true;
+      "workbench.tree.enableStickyScroll" =  true;
+      "terminal.integrated.stickyScroll.enabled" =  true;
+      "window.zoomPerWindow" =  true;
 
       "commands.commands" = {
         "setAndFormatJson" = {
@@ -134,7 +143,10 @@
     ];
   };
 
-  home.activation.installExtensions =
+  # home.activation.installExtensions =
+  #   lib.hm.dag.entryAfter [ "writeBoundary" ]
+  #     (lib.optionalString config.isDarwin (builtins.concatStringsSep "\n" (map (e: "${config.programs.vscode.package}/bin/code --install-extension ${e} --force") extensions)));
+  home.activation.updateExtensions =
     lib.hm.dag.entryAfter [ "writeBoundary" ]
-      (lib.optionalString config.isDarwin (builtins.concatStringsSep "\n" (map (e: "${config.programs.vscode.package}/bin/code --install-extension ${e} --force") extensions)));
+      (lib.optionalString config.isDarwin "${config.programs.vscode.package}/bin/code --update-extensions");
 }
