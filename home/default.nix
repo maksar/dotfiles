@@ -40,7 +40,7 @@
     duf
     mc
 
-    awscli2
+    stable.awscli2
     ssm-session-manager-plugin
     aws-mfa
 
