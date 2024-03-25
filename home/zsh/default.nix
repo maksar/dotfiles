@@ -12,10 +12,18 @@
       show_help = false;
     };
   };
+
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
     enableCompletion = true;
+    initExtraBeforeCompInit = ''
+    # $PWD/result*/bin
+      for i in ''${(s/:/)PATH} ; do
+        test -d ''${i}/../share/zsh/vendor-completions && fpath+=(''${i}/../share/zsh/vendor-completions)
+        test -d ''${i}/../share/zsh/site-functions && fpath+=(''${i}/../share/zsh/site-functions)
+      done
+    '';
     syntaxHighlighting.enable = true;
     envExtra = ''
       PATH=./bin/:$PATH
@@ -31,7 +39,8 @@
       name = "powerlevel10k";
       src = pkgs.zsh-powerlevel10k;
       file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-    }];
+    }
+    ];
     shellAliases = {
       ls = "eza -la --icons";
     };
