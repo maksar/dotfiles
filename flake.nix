@@ -44,6 +44,8 @@
               inherit (prev) system;
               inherit config;
             };
+
+            # awscli2 = stable.awscli2;
           })
         ];
       };
@@ -109,10 +111,10 @@
 
       # Build and activate with `nix build .#cloudVM.activationPackage; ./result/activate`
       cloudVM = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
+        pkgs = import nixpkgs ( nixpkgsConfig // {
           system = "x86_64-linux";
-          config = { allowUnfree = true; };
-        };
+          # ; # { allowUnfree = true; };
+        });
 
         modules = [
           homeManagerCommonConfig
