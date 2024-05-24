@@ -74,6 +74,7 @@
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
       "remote.SSH.defaultExtensions" = extensions;
+      "remote.SSH.useExecServer" = false;
       "resmon.disk.drives" = ["/dev/root"];
       "resmon.disk.format" = "PercentUsed";
       "resmon.show.disk" = true;

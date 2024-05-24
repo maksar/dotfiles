@@ -60,6 +60,8 @@
     silver-searcher
     fx
     q-text-as-data
+
+    piknik
   ];
 
   programs.man.enable = true;
