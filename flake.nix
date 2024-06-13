@@ -3,10 +3,7 @@
 
   inputs = {
     # Package sets
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nixpkgs-master.url = "github:nixos/nixpkgs/master";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/23.11";
+    nixpkgs.url = "github:nixos/nixpkgs/master";
 
     # Environment/system management
     darwin.url = "github:LnL7/nix-darwin";
@@ -18,36 +15,13 @@
     comma.url = "github:DavHau/comma/flake";
     comma.inputs.nixpkgs.follows = "nixpkgs";
 
-    flake-compat = {
-      url = "github:edolstra/flake-compat";
-      flake = false;
-    };
     flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs = { self, nixpkgs, darwin, home-manager, flake-utils, ... }@inputs:
     let
-      # Configuration for `nixpkgs` mostly used in personal configs.
-      nixpkgsConfig = with inputs; rec {
+      nixpkgsConfig = {
         config = { allowUnfree = true; };
-        overlays = self.overlays ++ [
-          (final: prev: rec {
-            master = import nixpkgs-master {
-              inherit (prev) system;
-              inherit config;
-            };
-            unstable = import nixpkgs-unstable {
-              inherit (prev) system;
-              inherit config;
-            };
-            stable = import nixpkgs-stable {
-              inherit (prev) system;
-              inherit config;
-            };
-
-            # awscli2 = stable.awscli2;
-          })
-        ];
       };
 
       homeManagerCommonConfig = { imports = [ ./home ]; };
@@ -113,7 +87,6 @@
       cloudVM = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs ( nixpkgsConfig // {
           system = "x86_64-linux";
-          # ; # { allowUnfree = true; };
         });
 
         modules = [

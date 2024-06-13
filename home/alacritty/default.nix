@@ -61,7 +61,7 @@
       font = {
         size = 19;
         normal = {
-          family = "PragmataPro Liga";
+          family = "PragmataProLiga Nerd Font";
           style = "Regular";
         };
         bold = {

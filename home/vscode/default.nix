@@ -2,7 +2,6 @@
 
   let
   extensions = [
-    "2gua.rainbow-brackets"
     "4ops.terraform"
     "akamud.vscode-theme-onedark"
     "amazonwebservices.aws-toolkit-vscode"
@@ -51,7 +50,7 @@
   ];
   in
 {
-  home.packages = with pkgs; [ nixfmt curl jq jqp nil ];
+  home.packages = with pkgs; [ nixfmt-classic curl jq jqp nil ];
 
   programs.vscode = {
     enable = config.isDarwin;
@@ -80,7 +79,7 @@
       "resmon.show.disk" = true;
       "telemetry.enableCrashReporter" = false;
       "telemetry.enableTelemetry" = false;
-      "terminal.integrated.fontFamily" = "PragmataPro Liga";
+      "terminal.integrated.fontFamily" = "PragmataProLiga Nerd Font";
       "terminal.integrated.fontSize" = 16.5;
       "terminal.integrated.tabs.enabled" = false;
       "terminal.integrated.scrollback" = 10000;

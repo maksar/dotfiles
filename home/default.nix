@@ -16,7 +16,7 @@
   manual.manpages.enable = false;
 
   home.packages = with pkgs; [
-    nixUnstable
+    nixVersions.latest
 
     home-manager
 
@@ -40,7 +40,7 @@
     duf
     mc
 
-    stable.awscli2
+    awscli2
     ssm-session-manager-plugin
     aws-mfa
 
@@ -61,7 +61,6 @@
     fx
     q-text-as-data
 
-    piknik
   ];
 
   programs.man.enable = true;
