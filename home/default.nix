@@ -64,7 +64,7 @@
   ];
 
   programs.man.enable = true;
-  programs.autojump.enable = true;
+  # programs.autojump.enable = true;
   programs.jq.enable = true;
   programs.dircolors.enable = true;
   programs.fzf = {
