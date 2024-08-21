@@ -43,6 +43,7 @@
     ];
     shellAliases = {
       ls = "eza -la --icons";
+      j = "just build";
     };
 
     oh-my-zsh = {
