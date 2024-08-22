@@ -79,7 +79,7 @@
       "resmon.show.disk" = true;
       "telemetry.enableCrashReporter" = false;
       "telemetry.enableTelemetry" = false;
-      "terminal.integrated.fontFamily" = "PragmataProLiga Nerd Font";
+      "terminal.integrated.fontFamily" = "Pragmasevka Nerd Font";
       "terminal.integrated.fontSize" = 16.5;
       "terminal.integrated.tabs.enabled" = false;
       "terminal.integrated.scrollback" = 10000;
@@ -92,9 +92,12 @@
       "window.commandCenter"= false;
 
       "editor.stickyScroll.enabled" =  true;
+      "editor.cursorSmoothCaretAnimation" = "on";
       "workbench.tree.enableStickyScroll" =  true;
       "terminal.integrated.stickyScroll.enabled" =  true;
       "window.zoomPerWindow" =  true;
+
+      "window.confirmBeforeClose" = "keyboardOnly";
 
       "commands.commands" = {
         "setAndFormatJson" = {
