@@ -3,8 +3,7 @@ let userConfig = config.home-manager.users.${config.users.primaryUser};
 in
 {
   fonts = {
-    fontDir.enable = true;
-    fonts = pkgs.lib.optionals userConfig.dropboxEnabled [
+    packages = pkgs.lib.optionals userConfig.dropboxEnabled [
       (pkgs.stdenv.mkDerivation rec {
         pname = "pragmata-pro";
         version = "0.8.28";
