@@ -43,15 +43,6 @@ in
       gui.showIcons = false;
       git.pull.mode = "rebase";
     };
-    package = pkgs.lazygit.overrideAttrs (o: {
-      version = "latest";
-      src = pkgs.fetchFromGitHub {
-        owner = "jesseduffield";
-        repo = "lazygit";
-        rev = "c08a5fe4e79cc0b3f1810dd1c6a004a83cfa15f6";
-        hash = "sha256-H27pHe+T7DnHIg3WSnqxPYq9FE18GFtyt1fx7XpekGw=";
-      };
-    });
   };
 
   programs.git = {
