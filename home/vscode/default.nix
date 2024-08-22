@@ -114,6 +114,10 @@
 
     keybindings = [
       {
+        "key" = "F2";
+        "command"= "workbench.action.toggleMaximizedPanel";
+      }
+      {
         key = "f9";
         command = "editor.action.showDefinitionPreviewHover";
         when = "editorTextFocus";
