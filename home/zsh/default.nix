@@ -13,17 +13,21 @@
     };
   };
 
+  programs.carapace = {
+    enable = true;
+  };
+
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
     enableCompletion = true;
-    initExtraBeforeCompInit = ''
-    # $PWD/result*/bin
-      for i in ''${(s/:/)PATH} ; do
-        test -d ''${i}/../share/zsh/vendor-completions && fpath+=(''${i}/../share/zsh/vendor-completions)
-        test -d ''${i}/../share/zsh/site-functions && fpath+=(''${i}/../share/zsh/site-functions)
-      done
-    '';
+    # initExtraBeforeCompInit = ''
+    # # $PWD/result*/bin
+    #   for i in ''${(s/:/)PATH} ; do
+    #     test -d ''${i}/../share/zsh/vendor-completions && fpath+=(''${i}/../share/zsh/vendor-completions)
+    #     test -d ''${i}/../share/zsh/site-functions && fpath+=(''${i}/../share/zsh/site-functions)
+    #   done
+    # '';
     syntaxHighlighting.enable = true;
     envExtra = ''
       PATH=./bin/:$PATH
@@ -44,6 +48,7 @@
     shellAliases = {
       ls = "eza -la --icons";
       j = "just build";
+      jt = "just test";
     };
 
     oh-my-zsh = {

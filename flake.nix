@@ -76,6 +76,7 @@
         macbook = darwin.lib.darwinSystem {
           system = "x86_64-darwin";
           modules = nixDarwinCommonModules ++ [{
+            system.stateVersion = 5;
             users.primaryUser = "maksar";
             networking.computerName = "Maksar 💻";
             networking.hostName = "MaksarBookPro";

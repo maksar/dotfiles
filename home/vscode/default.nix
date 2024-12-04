@@ -89,7 +89,8 @@
       "workbench.fontAliasing" = "antialiased";
       "workbench.iconTheme" = "icons";
       "yaml.customTags" = ["!reference sequence"];
-      "window.commandCenter"= false;
+      "window.commandCenter" = false;
+      "editor.accessibilitySupport" = "off";
 
       "editor.stickyScroll.enabled" =  true;
       "editor.cursorSmoothCaretAnimation" = "on";

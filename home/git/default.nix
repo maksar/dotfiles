@@ -15,7 +15,7 @@ in
 
     pkgs.gitAndTools.delta
     pkgs.diff-so-fancy
-    pkgs._1password
+    pkgs._1password-cli
   ];
 
   xdg.configFile = {

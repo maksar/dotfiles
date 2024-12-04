@@ -15,6 +15,7 @@
     ];
 
   };
+  ids.gids.nixbld = 30000;
   nix.gc.automatic = false;
   nix.extraOptions = ''
     gc-keep-derivations = true

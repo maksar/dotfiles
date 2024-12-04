@@ -61,7 +61,8 @@
       font = {
         size = 19;
         normal = {
-          family = "PragmataProLiga Nerd Font";
+          family = "Pragmasevka Nerd Font";
+          # family = "PragmataProLiga Nerd Font";
           style = "Regular";
         };
         bold = {
