@@ -114,6 +114,11 @@
 
         };
       };
+
+      "cSpell.userWords" = [
+        "widengle"
+        "cicd"
+      ];
     };
 
     keybindings = [

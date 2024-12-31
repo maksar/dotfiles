@@ -27,6 +27,7 @@
         test -d "''${i}/../share/zsh/site-functions" && fpath+=("''${i}/../share/zsh/site-functions")
       done
     '';
+
     syntaxHighlighting.enable = true;
     envExtra = ''
       PATH=./bin/:$PATH
