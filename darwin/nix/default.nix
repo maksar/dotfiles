@@ -7,7 +7,7 @@
     trusted-users = ["maksar"];
     cores = 6;
     max-jobs = 1;
-    substituters = [ "https://nix-cache.cicd.soostonelabs.com/" ];
+    substituters = [ "https://nix-cache.fairy-mercat.ts.net" ];
 
     trusted-public-keys =
     [

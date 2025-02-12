@@ -29,14 +29,13 @@
     "johnpapa.vscode-peacock"
     "justusadam.language-haskell"
     "luggage66.AWK"
-    "mechatroner.rainbow-csv"
     "mhutchie.git-graph"
     "mkhl.direnv"
     "mogeko.haskell-extension-pack"
     "ms-vscode-remote.vscode-remote-extensionpack"
     "mutantdino.resourcemonitor"
     "oderwat.indent-rainbow"
-    "rebornix.ruby"
+    "Shopify.ruby-lsp"
     "shinichi-takii.sql-bigquery"
     "sianglim.slim"
     "streetsidesoftware.code-spell-checker"
@@ -118,6 +117,13 @@
       "cSpell.userWords" = [
         "widengle"
         "cicd"
+        "cdag"
+        "mlflow"
+        "soostone"
+        "pkgs"
+        "nixpkgs"
+        "maksar"
+        "shestakov"
       ];
     };
 

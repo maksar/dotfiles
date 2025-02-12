@@ -54,7 +54,7 @@
 
       # My `nix-darwin` configs
       darwinConfigurations = {
-        # Mininal configuration to bootstrap systems
+        # Minimal configuration to bootstrap systems
         bootstrap = darwin.lib.darwinSystem {
           system = "x86_64-darwin";
           modules = [ ./darwin/nix { nixpkgs = nixpkgsConfig; } ];
